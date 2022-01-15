@@ -4,7 +4,6 @@ import Navbar from "../lib/components/Navbar";
 import Image from "next/image";
 
 import img1 from "../lib/assets/carousel/WhatsApp Image 2022-01-11 at 4.54.22 PM.jpeg";
-import img2 from "../lib/assets/carousel/WhatsApp Image 2022-01-11 at 4.54.23 PM.jpeg";
 
 import service1 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.18 PM (1).jpeg"
 import service2 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.19 PM.jpeg"
@@ -12,23 +11,20 @@ import service3 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 4.21.5
 
 import {AiOutlineInstagram, AiOutlineTwitter} from 'react-icons/ai'
 import {FaFacebookF} from 'react-icons/fa'
+import HeroCarousel from "../lib/components/HeroCarousel";
+import FancyText from "../lib/components/FancyText";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className="relative h-[90vh] w-full">
-        <Image placeholder="blur" src={img2} layout="fill" objectFit="cover" />
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl">
-          FINEST HOTEL COLLECTION
-        </h1>
-      </div>
+      <HeroCarousel />
       <section className="text-center w-full py-12">
         <div>
           <header className="relative">
-            <h1 className="text-4xl max-w-lg font-thin m-auto">
+            <FancyText bgText="Welcome">
               WONDERFUL HOTEL IN THE HEART OF ATHENS, GREECE.
-            </h1>
+            </FancyText>
           </header>
           <p className="max-w-lg text-center m-auto my-8 text-base">
             Hotel LUX is an oasis in the heart of the historic and business
@@ -60,7 +56,7 @@ const Home = () => {
       <section className="bg-[#f5f5f5] text-center w-full py-12">
         <div>
           <header className="relative">
-            <h1 className="text-6xl max-w-lg font-thin m-auto">ROOMS</h1>
+            <FancyText bgText="Luxury" className="text-5xl mt-12">Rooms</FancyText>
           </header>
           <div className="m-auto w-4/5 bg-white flex my-12 h-[60vh]">
             <div className="w-1/2 relative">
@@ -94,9 +90,7 @@ const Home = () => {
       </section>
       <section className="bg-white text-center w-full py-12">
         <header className="relative">
-          <h1 className="text-6xl max-w-lg font-thin m-auto uppercase">
-            Services
-          </h1>
+          <FancyText bgText="Awesome" className="my-10 text-5xl">Services</FancyText>
         </header>
         <div className="w-[90%] m-auto flex space-evenly gap-12 my-12">
           <div className="w-full relative min-h-[30rem]">

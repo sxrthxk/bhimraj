@@ -4,7 +4,7 @@ import DropDownLink from "./DropDownLink";
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between w-full bg-white text-white h-[10vh] sticky top-0 z-10">
+    <header className="flex justify-between w-full bg-white text-white h-[10vh] sticky top-0 z-50">
       <div className="bg-black p-6 flex justify-center items-center min-w-max px-12">
         <h1>HOTEL LUX</h1>
       </div>
