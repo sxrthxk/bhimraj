@@ -1,13 +1,17 @@
 import Link from "next/link";
 import React from "react";
 import DropDownLink from "./DropDownLink";
+import logo from '../assets/logo.png'
+import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <header className="flex justify-between w-full bg-white text-white h-[10vh] sticky top-0 z-50">
-      <div className="bg-black p-6 flex justify-center items-center min-w-max px-12">
-        <h1>HOTEL LUX</h1>
+    <header className="flex justify-between w-full bg-white text-white h-[12vh] sticky top-0 z-50">
+      <Link href="/">
+      <div className="relative w-2/12 h-full p-5 flex justify-center bg-black cursor-pointer">
+        <Image src={logo} layout="fill" objectFit="contain"/>
       </div>
+      </Link>
       <div className="w-full text-black flex justify-evenly items-center uppercase px-12">
         <Link href="/">
           <span className="hover:text-khaki transition-all cursor-pointer">
@@ -46,13 +50,17 @@ const Navbar = () => {
             </span>
           </div>
         </DropDownLink>
-        <a href="#" className="hover:text-khaki transition-all">
-          Contact
-        </a>
+        <Link href="/contact">
+          <span className="hover:text-khaki transition-all cursor-pointer">
+            contact
+          </span>
+        </Link>
       </div>
-      <div className="bg-khaki hover:bg-black p-6 transition-all flex justify-center items-center min-w-max px-12">
-        <h1>BOOK NOW</h1>
-      </div>
+      <Link href={"/contact"}>
+        <div className="bg-khaki hover:bg-black p-6 transition-all flex justify-center items-center min-w-max px-12 cursor-pointer w-2/12">
+          <h1>BOOK NOW</h1>
+        </div>
+      </Link>
     </header>
   );
 };

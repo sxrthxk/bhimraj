@@ -16,9 +16,9 @@ const FancyText = ({
         className
       }
     >
-      <h2 className="absolute text-gray-300 font-fancy text-[7.5rem] z-[-1] left-1/2 transorm -translate-x-1/2 font-thin bottom-1/4 capitalize ">
+      <div className="absolute text-gray-300 font-fancy text-[7.5rem] z-[-1] left-1/2 transorm -translate-x-1/2 font-thin bottom-1/4 capitalize ">
         {bgText}
-      </h2>
+      </div>
       {children}
     </h1>
   );

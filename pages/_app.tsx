@@ -1,8 +1,25 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 import "swiper/css/bundle";
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { motion } from "framer-motion";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps, router }: AppProps) {
+  return (
+    <motion.div
+      key={router.route}
+      initial="initial"
+      animate="animate"
+      variants={{
+        initial: {
+          opacity: 0,
+        },
+        animate: {
+          opacity: 1,
+        },
+      }}
+    >
+      <Component {...pageProps} />
+    </motion.div>
+  );
 }
-export default MyApp
+export default MyApp;
