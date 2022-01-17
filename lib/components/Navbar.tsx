@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import DropDownLink from "./DropDownLink";
-import logo from '../assets/logo.png'
+import logo from '../assets/logo_compressed.png'
 import Image from "next/image";
 
 const Navbar = () => {
