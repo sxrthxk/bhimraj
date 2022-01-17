@@ -9,7 +9,7 @@ const Navbar = () => {
     <header className="flex justify-between w-full bg-white text-white h-[12vh] sticky top-0 z-50">
       <Link href="/">
       <div className="relative w-2/12 h-full p-5 flex justify-center bg-black cursor-pointer">
-        <Image src={logo} layout="fill" objectFit="contain"/>
+        <Image src={logo} layout="fill" objectFit="contain" placeholder="blur"/>
       </div>
       </Link>
       <div className="w-full text-black flex justify-evenly items-center uppercase px-12">
