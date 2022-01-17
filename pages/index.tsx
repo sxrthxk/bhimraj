@@ -5,19 +5,19 @@ import Image from "next/image";
 
 import img1 from "../lib/assets/carousel/WhatsApp Image 2022-01-11 at 4.54.22 PM.jpeg";
 
-import service1 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.18 PM (1).jpeg"
-import service2 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.19 PM.jpeg"
-import service3 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 4.21.59 PM.jpeg"
+import service1 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.18 PM (1).jpeg";
+import service2 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.19 PM.jpeg";
+import service3 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 4.21.59 PM.jpeg";
 
-import {AiOutlineInstagram, AiOutlineTwitter} from 'react-icons/ai'
-import {FaFacebookF} from 'react-icons/fa'
 import HeroCarousel from "../lib/components/HeroCarousel";
 import FancyText from "../lib/components/FancyText";
+import Footer from "../lib/components/Footer";
+import RoomCard from "../lib/components/RoomCard";
+import Layout from "../lib/components/Layout";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <HeroCarousel />
       <section className="text-center w-full py-12">
         <div>
@@ -41,60 +41,70 @@ const Home = () => {
         >
           View our Services
         </a>
-        <div className="w-3/4 m-auto flex space-evenly gap-12 my-12">
+        {/* <div className="w-3/4 m-auto flex space-evenly gap-12 my-12">
           <div className="w-full relative min-h-[30rem]">
-            <Image placeholder="blur" src={img1} objectFit="cover" layout="fill"></Image>
+            <Image
+              placeholder="blur"
+              src={img1}
+              objectFit="cover"
+              layout="fill"
+            ></Image>
           </div>
           <div className="w-full relative min-h-[30rem]">
-            <Image placeholder="blur" src={img1} objectFit="cover" layout="fill"></Image>
+            <Image
+              placeholder="blur"
+              src={img1}
+              objectFit="cover"
+              layout="fill"
+            ></Image>
           </div>
           <div className="w-full relative min-h-[30rem]">
-            <Image placeholder="blur" src={img1} objectFit="cover" layout="fill"></Image>
+            <Image
+              placeholder="blur"
+              src={img1}
+              objectFit="cover"
+              layout="fill"
+            ></Image>
           </div>
-        </div>
+        </div> */}
       </section>
       <section className="bg-[#f5f5f5] text-center w-full py-12">
         <div>
           <header className="relative">
-            <FancyText bgText="Luxury" className="text-5xl mt-12">Rooms</FancyText>
+            <FancyText bgText="Luxury" className="text-5xl mt-12">
+              Rooms
+            </FancyText>
           </header>
-          <div className="m-auto w-4/5 bg-white flex my-12 h-[60vh]">
-            <div className="w-1/2 relative">
-              <Image placeholder="blur" src={img1} layout="fill" objectFit="cover" />
-            </div>
-            <div className="flex flex-col items-start justify-evenly w-1/2 px-20 text-left">
-              <header className="">
-                <h1 className="text-4xl m-auto">LUXURY DOUBLE ROOM SUITE</h1>
-                <span className="text-lg italic text-gray-400">
-                  A quality room with sea or mountain view
-                </span>
-              </header>
-              <p>
-                Luxury Single Room Art Suite has a comfortable queen size or
-                twin bed, a sitting area, separate desk and bathroom with
-                walk-in rain dance shower or a bath and shower and modern art
-                and neutral colors.
-              </p>
-              <div className="flex justify-between w-full">
-                <span className="text-khaki text-lg">400/Night</span>
-                <a
-                  href=""
-                  className="text-black hover:text-khaki transition-all text-lg"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
+          <RoomCard
+            link="/rooms/suite/"
+            roomData={{
+              caption: "A quality room with sea or mountain view",
+              description:
+                "Luxury Single Room Art Suite has a comfortable queen size or twin bed, a sitting area, separate desk and bathroom with walk-in rain dance shower or a bath and shower and modern art and neutral colors.",
+              rate: "400/Night",
+              title: "LUXURY DOUBLE ROOM SUITE",
+            }}
+            src={img1}
+          />
         </div>
       </section>
-      <section className="bg-white text-center w-full py-12">
+      <section
+        className="bg-white text-center w-full py-12 pt-28"
+        id="services"
+      >
         <header className="relative">
-          <FancyText bgText="Awesome" className="my-10 text-5xl">Services</FancyText>
+          <FancyText bgText="Awesome" className="my-10 text-5xl">
+            Services
+          </FancyText>
         </header>
         <div className="w-[90%] m-auto flex space-evenly gap-12 my-12">
           <div className="w-full relative min-h-[30rem]">
-            <Image placeholder="blur" src={service1} objectFit="cover" layout="fill"></Image>
+            <Image
+              placeholder="blur"
+              src={service1}
+              objectFit="cover"
+              layout="fill"
+            ></Image>
             <a
               href="#"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg"
@@ -103,7 +113,12 @@ const Home = () => {
             </a>
           </div>
           <div className="w-full relative min-h-[30rem]">
-            <Image placeholder="blur" src={service2} objectFit="cover" layout="fill"></Image>
+            <Image
+              placeholder="blur"
+              src={service2}
+              objectFit="cover"
+              layout="fill"
+            ></Image>
             <a
               href="#"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg"
@@ -112,7 +127,12 @@ const Home = () => {
             </a>
           </div>
           <div className="w-full relative min-h-[30rem]">
-            <Image placeholder="blur" src={service3} objectFit="cover" layout="fill"></Image>
+            <Image
+              placeholder="blur"
+              src={service3}
+              objectFit="cover"
+              layout="fill"
+            ></Image>
             <a
               href="#"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg"
@@ -121,7 +141,12 @@ const Home = () => {
             </a>
           </div>
           <div className="w-full relative min-h-[30rem]">
-            <Image placeholder="blur" src={service1} objectFit="cover" layout="fill"></Image>
+            <Image
+              placeholder="blur"
+              src={service1}
+              objectFit="cover"
+              layout="fill"
+            ></Image>
             <a
               href="#"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg"
@@ -131,29 +156,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <footer className="bg-black text-white py-12">
-        <div className="m-auto w-3/4 flex justify-around px-12">
-          <div>
-            <h1 className="font-semibold text-xl">ABOUT</h1>
-          </div>
-          <div className="space-y-4">
-            <h1 className="font-semibold text-xl">QUICK LINKS</h1>
-            <ul className="space-y-2">
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Youtube</li>
-              <li>Pinterest</li>
-            </ul>
-          </div>
-        </div>
-      <div className="w-full h-px bg-gray-700 my-12"></div>
-      <div className="w-1/4 m-auto flex justify-around">
-        <AiOutlineInstagram className="w-8 h-8 fill-current text-khaki"/>
-        <AiOutlineTwitter className="w-8 h-8 fill-current text-khaki"/>
-        <FaFacebookF className="w-8 h-8 fill-current text-khaki"/>
-      </div>
-      </footer>
-    </div>
+    </Layout>
   );
 };
 

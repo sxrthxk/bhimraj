@@ -31,28 +31,32 @@ const HeroCarousel = () => {
       >
         <SwiperSlide>
           <div className="relative h-[90vh] w-full">
+            <div className="absolute top-0 left-0 w-full h-full bg-black z-[1] opacity-50"></div>
             <Image
               placeholder="blur"
               src={img2}
               layout="fill"
               objectFit="cover"
-              
             />
-            <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl font-serif text-center">
+            <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl font-serif text-center z-[2]">
               FINEST HOTEL COLLECTION
-              <h2 className="font-fancy text-gray-300 font-normal py-5 text-6xl drop-shadow-md">Book Early Save More</h2>
+              <h2 className="font-fancy text-gray-300 font-normal py-5 text-6xl drop-shadow-md">
+                Book Early Save More
+              </h2>
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative h-[90vh] w-full">
+          <div className="absolute top-0 left-0 w-full h-full bg-black z-[1] opacity-50"></div>
+
             <Image
               placeholder="blur"
               src={img1}
               layout="fill"
               objectFit="cover"
             />
-            <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl">
+            <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl z-[2]">
               FINEST HOTEL COLLECTION
             </h1>
           </div>

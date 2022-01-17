@@ -9,22 +9,26 @@ const Navbar = () => {
         <h1>HOTEL LUX</h1>
       </div>
       <div className="w-full text-black flex justify-evenly items-center uppercase px-12">
-        <a href="#" className="hover:text-khaki transition-all">
-          home
-        </a>
-        <a href="#" className="hover:text-khaki transition-all">
-          about us
-        </a>
+        <Link href="/">
+          <span className="hover:text-khaki transition-all cursor-pointer">
+            home
+          </span>
+        </Link>
+        <Link href="/about-us">
+          <span className="hover:text-khaki transition-all cursor-pointer">
+            about us
+          </span>
+        </Link>
         <DropDownLink href="#" linkText="Rooms">
           <div className="flex flex-col text-gray-400 space-y-2 font-semibold">
             <span className="hover:text-khaki transition-all">
-              <Link href={"#"}>suite</Link>
+              <Link href={"/rooms/suite"}>suite</Link>
             </span>
             <span className="hover:text-khaki transition-all">
-              <Link href={"#"}>executive</Link>
+              <Link href={"/rooms/executive"}>executive</Link>
             </span>
             <span className="hover:text-khaki transition-all">
-              <Link href={"#"}>deluxe</Link>
+              <Link href={"/rooms/deluxe"}>deluxe</Link>
             </span>
           </div>
         </DropDownLink>
@@ -32,13 +36,13 @@ const Navbar = () => {
         <DropDownLink href="#" linkText="Features">
           <div className="flex flex-col text-gray-400 space-y-2 font-semibold">
             <span className="hover:text-khaki transition-all">
-              <Link href={"#"}>our services</Link>
+              <Link href={"/#services"}>our services</Link>
             </span>
             <span className="hover:text-khaki transition-all">
-              <Link href={"#"}>events</Link>
+              <Link href={"/events"}>events</Link>
             </span>
             <span className="hover:text-khaki transition-all">
-              <Link href={"#"}>blogs</Link>
+              <Link href={"/blogs"}>blogs</Link>
             </span>
           </div>
         </DropDownLink>
