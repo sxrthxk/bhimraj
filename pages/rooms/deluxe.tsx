@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../lib/components/Layout";
 import RoomCard from "../../lib/components/RoomCard";
 import RoomLayout from "../../lib/components/RoomLayout";
-import img1 from "../../lib/assets/carousel/WhatsApp Image 2022-01-11 at 4.54.22 PM.jpeg";
+import roomImg from "../../lib/assets/rooms/deluxe/photo_2022-01-17_15-32-51.jpg";
 
 
 const DeluxeRoom = () => {
@@ -16,9 +16,9 @@ const DeluxeRoom = () => {
             description:
               "Luxury Single Room Art Suite has a comfortable queen size or twin bed, a sitting area, separate desk and bathroom with walk-in rain dance shower or a bath and shower and modern art and neutral colors.",
             rate: "400/Night",
-            title: "LUXURY DOUBLE ROOM SUITE",
+            title: "LUXURY DOUBLE ROOM DELUXE",
           }}
-          src={img1}
+          src={roomImg}
         />
       </RoomLayout>
     </Layout>

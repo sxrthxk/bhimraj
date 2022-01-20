@@ -64,7 +64,7 @@ const CarouselImage = ({
 
   return (
     <>
-      <div className="relative h-[90vh] w-full">
+      <div className="relative h-[72vh] md:h-[90vh] w-full">
         <div className="absolute top-0 left-0 w-full h-full bg-black z-[1] opacity-50"></div>
         <Image
           placeholder="blur"

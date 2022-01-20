@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../lib/components/Layout";
 import RoomCard from "../../lib/components/RoomCard";
 import RoomLayout from "../../lib/components/RoomLayout";
-import img1 from "../../lib/assets/carousel/WhatsApp Image 2022-01-11 at 4.54.22 PM.jpeg";
+import roomImg from "../../lib/assets/rooms/suite/photo_2022-01-17_15-37-37.jpg";
 
 
 const SuitePage = () => {
@@ -18,7 +18,7 @@ const SuitePage = () => {
             rate: "400/Night",
             title: "LUXURY DOUBLE ROOM SUITE",
           }}
-          src={img1}
+          src={roomImg}
         />
       </RoomLayout>
     </Layout>
