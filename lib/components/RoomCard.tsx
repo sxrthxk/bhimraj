@@ -17,11 +17,11 @@ const RoomCard = ({
   link: string;
 }) => {
   return (
-    <div className="m-auto w-4/5 bg-white flex my-12 h-[60vh]">
-      <div className="w-1/2 relative">
-        <Image placeholder="blur" src={src} layout="fill" objectFit="cover" />
+    <div className="m-auto w-11/12 md:w-4/5 bg-white flex flex-col md:flex-row my-12 h-auto md:h-[60vh]">
+      <div className="w-full md:w-1/2 h-64 md:h-auto relative">
+        <Image placeholder="blur" src={src} layout="fill" objectFit="cover" alt="Room Image"/>
       </div>
-      <div className="flex flex-col items-start justify-evenly w-1/2 px-20 text-left">
+      <div className="flex flex-col items-start justify-evenly w-full md:w-1/2 px-6 md:px-20 py-6 md:py-0 text-left space-y-6 md:space-y-0">
         <header className="">
           <h1 className="text-4xl m-auto">{roomData.title}</h1>
           <span className="text-lg italic text-gray-400">

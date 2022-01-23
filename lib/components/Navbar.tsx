@@ -4,15 +4,24 @@ import DropDownLink from "./DropDownLink";
 import logo from "../assets/logo_compressed.png";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
+import { FaCaretRight } from "react-icons/fa";
 
 const Navbar = () => {
-
-  const [dropdownHeight, setDropdownHeight] = useState<'h-0' | 'h-48'>('h-0')
+  const [mobileDropDown, setMobileDropDown] = useState(false);
+  const [roomDropDown, setRoomDropDown] = useState(false);
+  const [featureDropDown, setfeatureDropDown] = useState(false);
 
   const toggleDropDown = () => {
-     dropdownHeight === "h-0" && setDropdownHeight('h-48')
-     dropdownHeight === "h-48" && setDropdownHeight('h-0')
-  }
+    setMobileDropDown((x) => !x);
+  };
+
+  const featuresDropDownHandler = () => {
+    setfeatureDropDown((x) => !x);
+  };
+
+  const roomDropDownHandler = () => {
+    setRoomDropDown((x) => !x);
+  };
 
   return (
     <header className="flex flex-col md:flex-row justify-between w-full bg-white text-white h-auto md:h-[12vh] relative md:sticky top-0 z-50">
@@ -75,17 +84,66 @@ const Navbar = () => {
           <h1>BOOK NOW</h1>
         </div>
       </Link>
-      <button className="m-auto mb-6" onClick={toggleDropDown}>
+      <button className="m-auto mb-6 block md:hidden" onClick={toggleDropDown}>
         <FaBars className="fill-current text-black w-6 h-6" />
       </button>
-      {true && (
-        <div className={"bg-black text-center absolute top-full w-full overflow-hidden ease-out transition-all " + dropdownHeight}>
-          <ul className=" flex flex-col justify-evenly items-center h-full">
-            <Link href="#">Home</Link>
-            <Link href="#">About Us</Link>
-            <Link href="#">Rooms</Link>
-            <Link href="#">Contact</Link>
-            <Link href="#">Events</Link>
+      {mobileDropDown && (
+        <div
+          className={
+            "bg-black text-center absolute top-full w-full overflow-hidden ease-out transition-all h-auto uppercase"
+          }
+        >
+          <ul className=" flex flex-col justify-evenly items-start h-full space-y-3 p-3 w-full">
+            <Link href="/">
+              <span className="flex justify-between w-full">Home</span>
+            </Link>
+
+            <Link href="/about-us">
+              <span className="flex justify-between w-full">About Us</span>
+            </Link>
+            <span
+              onClick={roomDropDownHandler}
+              className="flex justify-between w-full"
+            >
+              <div className={`${roomDropDown ? "text-khaki" : "text-white"}`}>
+                Rooms
+              </div>
+              <FaCaretRight />
+            </span>
+            {roomDropDown && (
+              <span className="pl-4 w-full text-left">
+                <ul className="flex flex-col space-y-3">
+                  <Link href="/rooms/deluxe">Deluxe</Link>
+                  <Link href="/rooms/suite">Suite</Link>
+                  <Link href="/rooms/executive">Executive</Link>
+                </ul>
+              </span>
+            )}
+            <span
+              onClick={featuresDropDownHandler}
+              className="flex justify-between w-full"
+            >
+              <div
+                className={`${featureDropDown ? "text-khaki" : "text-white"}`}
+              >
+                Features
+              </div>
+              <FaCaretRight />
+            </span>
+            {featureDropDown && (
+              <span className="pl-4 w-full text-left">
+                <ul className="flex flex-col space-y-3">
+                  <Link href="/$services">Our Services</Link>
+                  <Link href="/events">Events</Link>
+                  <Link href="/blogs">Blogs</Link>
+                </ul>
+              </span>
+            )}
+            <Link href="/contact">
+            <span className="flex justify-between w-full">
+              Contact
+            </span>
+            </Link>
           </ul>
         </div>
       )}

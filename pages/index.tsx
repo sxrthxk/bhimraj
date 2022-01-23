@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <Layout>
       <HeroCarousel />
-      <section className="text-center w-full py-12">
+      <section className="text-center w-full py-12 px-6 md:px-0">
         <div>
           <header className="relative">
             <FancyText bgText="Welcome">
@@ -97,7 +97,7 @@ const Home = () => {
             Services
           </FancyText>
         </header>
-        <div className="w-[90%] m-auto flex space-evenly gap-12 my-12">
+        <div className="w-[90%] m-auto grid gap-12 my-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           <div className="w-full relative min-h-[30rem]">
             <Image
               placeholder="blur"
