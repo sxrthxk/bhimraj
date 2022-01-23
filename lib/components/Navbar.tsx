@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex flex-col md:flex-row justify-between w-full bg-white text-white h-auto md:h-[12vh] relative md:sticky top-0 z-50">
+    <header className="flex flex-col md:flex-row justify-between w-full bg-white text-white h-[27.5vh] md:h-[12vh] relative md:sticky top-0 z-50">
       <Link href="/">
         <div className="relative w-full md:w-2/12 h-24 md:h-full p-5 flex justify-center bg-black cursor-pointer">
           <Image
@@ -80,11 +80,11 @@ const Navbar = () => {
         </Link>
       </div>
       <Link href={"/contact"}>
-        <div className="bg-khaki hover:bg-black p-3 md:p-6 transition-all flex justify-center items-center min-w-max px-12 cursor-pointer w-2/12 m-auto my-6 md:my-0">
+        <div className="bg-khaki hover:bg-black p-3 md:p-6 transition-all flex justify-center items-center min-w-max px-12 cursor-pointer w-2/12 m-auto my-3 md:my-0">
           <h1>BOOK NOW</h1>
         </div>
       </Link>
-      <button className="m-auto mb-6 block md:hidden" onClick={toggleDropDown}>
+      <button className="m-auto mb-4 block md:hidden" onClick={toggleDropDown}>
         <FaBars className="fill-current text-black w-6 h-6" />
       </button>
       {mobileDropDown && (
