@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex flex-col md:flex-row justify-between w-full bg-white text-white h-[27.5vh] md:h-[12vh] relative md:sticky top-0 z-50">
+    <header className="flex flex-col md:flex-row justify-between w-full bg-white text-white h-[27.5vh] md:h-[12vh] relative md:sticky top-0 z-50 shadow-lg">
       <Link href="/" passHref>
         <div className="relative w-full md:w-2/12 h-24 md:h-full p-5 flex justify-center bg-black cursor-pointer">
           <Image
