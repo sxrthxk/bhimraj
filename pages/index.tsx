@@ -104,6 +104,7 @@ const Home = () => {
               src={service1}
               objectFit="cover"
               layout="fill"
+              alt="Restaurant Image"
             ></Image>
             <a
               href="#"
@@ -118,7 +119,8 @@ const Home = () => {
               src={service2}
               objectFit="cover"
               layout="fill"
-            ></Image>
+              alt="Spa Image"
+              ></Image>
             <a
               href="#"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg"
@@ -132,7 +134,8 @@ const Home = () => {
               src={service3}
               objectFit="cover"
               layout="fill"
-            ></Image>
+              alt="Pool Image"
+              ></Image>
             <a
               href="#"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg"
@@ -146,7 +149,8 @@ const Home = () => {
               src={service1}
               objectFit="cover"
               layout="fill"
-            ></Image>
+              alt="Activities Image"
+              ></Image>
             <a
               href="#"
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg"

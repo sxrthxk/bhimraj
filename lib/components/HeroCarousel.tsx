@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectFade, Navigation, Autoplay } from "swiper";
 SwiperCore.use([EffectFade, Navigation, Autoplay]);
 
-const autoplayspeed = 2000;
+const autoplayspeed = 5000;
 
 const HeroCarousel = () => {
 
@@ -72,6 +72,7 @@ const CarouselImage = ({
           layout="fill"
           objectFit="cover"
           className={"transition-all duration-1000 " + scale}
+          alt="Hotel Image"
         />
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl font-serif text-center z-[2]">
           {primaryText}

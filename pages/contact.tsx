@@ -18,10 +18,10 @@ const contact = () => {
                 </FancyText>
                 <div className="flex justify-evenly items-center py-24">
                     <div className='w-1/6'>
-                    <Image src={goibibo} objectFit='cover'/>
+                    <Image src={goibibo} objectFit='cover' alt="GoIbibo Logo"/>
                     </div>
                     <div className='w-1/6'>
-                    <Image src={booking} objectFit='cover'/>
+                    <Image src={booking} objectFit='cover' alt="Booking Logo"/>
                     </div>
                 </div>
             </section>

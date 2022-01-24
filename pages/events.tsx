@@ -35,7 +35,7 @@ const EventsPage = () => {
             </span>
           </div>
           <div className="relative w-4/12 h-30vh">
-            <Image src={img1} objectFit="cover" layout="fill" />
+            <Image src={img1} objectFit="cover" layout="fill" alt="Event Image"/>
           </div>
         </div>
       </section>

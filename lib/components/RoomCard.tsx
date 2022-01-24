@@ -31,7 +31,7 @@ const RoomCard = ({
         <p>{roomData.description}</p>
         <div className="flex justify-between w-full">
           <span className="text-khaki text-lg">{roomData.rate}</span>
-          <Link href={link}>
+          <Link href={link} passHref>
             <span className="text-black hover:text-khaki transition-all text-lg cursor-pointer">
               Learn More
             </span>

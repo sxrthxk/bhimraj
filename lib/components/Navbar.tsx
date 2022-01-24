@@ -25,23 +25,24 @@ const Navbar = () => {
 
   return (
     <header className="flex flex-col md:flex-row justify-between w-full bg-white text-white h-auto md:h-[12vh] relative md:sticky top-0 z-50">
-      <Link href="/">
+      <Link href="/" passHref>
         <div className="relative w-full md:w-2/12 h-24 md:h-full p-5 flex justify-center bg-black cursor-pointer">
           <Image
             src={logo}
             layout="fill"
             objectFit="contain"
             placeholder="blur"
+            alt="Logo"
           />
         </div>
       </Link>
       <div className="w-full text-black hidden md:flex justify-evenly items-center uppercase px-12">
-        <Link href="/">
+        <Link href="/" passHref>
           <span className="hover:text-khaki transition-all cursor-pointer">
             home
           </span>
         </Link>
-        <Link href="/about-us">
+        <Link href="/about-us" passHref>
           <span className="hover:text-khaki transition-all cursor-pointer">
             about us
           </span>
@@ -73,13 +74,13 @@ const Navbar = () => {
             </span>
           </div>
         </DropDownLink>
-        <Link href="/contact">
+        <Link href="/contact" passHref>
           <span className="hover:text-khaki transition-all cursor-pointer">
             contact
           </span>
         </Link>
       </div>
-      <Link href={"/contact"}>
+      <Link href={"/contact"} passHref>
         <div className="bg-khaki hover:bg-black p-3 md:p-6 transition-all flex justify-center items-center min-w-max px-12 cursor-pointer w-2/12 m-auto my-6 md:my-0">
           <h1>BOOK NOW</h1>
         </div>
@@ -94,11 +95,11 @@ const Navbar = () => {
           }
         >
           <ul className=" flex flex-col justify-evenly items-start h-full space-y-3 p-3 w-full">
-            <Link href="/">
+            <Link href="/" passHref>
               <span className="flex justify-between w-full">Home</span>
             </Link>
 
-            <Link href="/about-us">
+            <Link href="/about-us" passHref>
               <span className="flex justify-between w-full">About Us</span>
             </Link>
             <span
@@ -139,7 +140,7 @@ const Navbar = () => {
                 </ul>
               </span>
             )}
-            <Link href="/contact">
+            <Link href="/contact" passHref>
             <span className="flex justify-between w-full">
               Contact
             </span>
