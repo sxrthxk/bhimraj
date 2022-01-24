@@ -76,6 +76,7 @@ const Home = () => {
             </FancyText>
           </header>
           <RoomCard
+            learnMore
             link="/rooms/suite/"
             roomData={{
               caption: "A quality room with sea or mountain view",

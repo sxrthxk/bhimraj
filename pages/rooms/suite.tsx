@@ -8,7 +8,7 @@ import roomImg from "../../lib/assets/rooms/suite/photo_2022-01-17_15-37-37.jpg"
 const SuitePage = () => {
   return (
     <Layout>
-      <RoomLayout>
+      <RoomLayout name="Suite" bg={roomImg}>
         <RoomCard
           link="/rooms/suite/"
           roomData={{
@@ -19,6 +19,7 @@ const SuitePage = () => {
             title: "LUXURY DOUBLE ROOM SUITE",
           }}
           src={roomImg}
+          learnMore={false}
         />
       </RoomLayout>
     </Layout>

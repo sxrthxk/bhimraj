@@ -86,7 +86,7 @@ const Navbar = () => {
         </div>
       </Link>
       <button className="m-auto mb-4 block md:hidden" onClick={toggleDropDown}>
-        <FaBars className="fill-current text-black w-6 h-6" />
+        <FaBars className="fill-current text-black w-6 h-6 mb-3" />
       </button>
       {mobileDropDown && (
         <div

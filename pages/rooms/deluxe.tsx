@@ -4,11 +4,10 @@ import RoomCard from "../../lib/components/RoomCard";
 import RoomLayout from "../../lib/components/RoomLayout";
 import roomImg from "../../lib/assets/rooms/deluxe/photo_2022-01-17_15-32-51.jpg";
 
-
 const DeluxeRoom = () => {
-    return (
-        <Layout>
-      <RoomLayout>
+  return (
+    <Layout>
+      <RoomLayout name="Deluxe" bg={roomImg}>
         <RoomCard
           link="/rooms/suite/"
           roomData={{
@@ -19,10 +18,11 @@ const DeluxeRoom = () => {
             title: "LUXURY DOUBLE ROOM DELUXE",
           }}
           src={roomImg}
+          learnMore={false}
         />
       </RoomLayout>
     </Layout>
-    )
-}
+  );
+};
 
-export default DeluxeRoom
+export default DeluxeRoom;
