@@ -4,11 +4,21 @@ import RoomCard from "../../lib/components/RoomCard";
 import RoomLayout from "../../lib/components/RoomLayout";
 import roomImg from "../../lib/assets/rooms/suite/photo_2022-01-17_15-37-37.jpg";
 
+import img1 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-23.jpg"
+import img2 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-24.jpg"
+import img3 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-25.jpg"
+import img5 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-26.jpg"
+import img6 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-27.jpg"
+import img4 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-26 (2).jpg"
+import Head from "next/head";
 
 const SuitePage = () => {
   return (
     <Layout>
-      <RoomLayout name="Suite" bg={roomImg}>
+      <Head>
+        <title>Bhimraj Resort | Suite Room</title>
+      </Head>
+      <RoomLayout name="Suite" bg={roomImg} imgarr={[img1, img2, img3, img4, img5, img6]}>
         <RoomCard
           link="/rooms/suite/"
           roomData={{

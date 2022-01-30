@@ -7,11 +7,15 @@ import Image from 'next/image'
 
 import goibibo from '../lib/assets/contact/goibibo.png'
 import booking from '../lib/assets/contact/booking.png'
+import Head from 'next/head'
 
 const contact = () => {
     return (
         <Layout>
-            <Hero src={hero} text='contact us' />
+            <Head>
+        <title>Bhimraj Resort | Contact</title>
+      </Head>
+            <Hero src={hero} text='contact us' darken/>
             <section className='w-full py-24'>
                 <FancyText bgText='Connect' className='text-6xl'>
                     Get In Touch

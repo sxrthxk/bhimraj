@@ -2,10 +2,14 @@ import Image from "next/image";
 import React from "react";
 import Layout from "../lib/components/Layout";
 import img1 from "../lib/assets/rooms/hero.jpg";
+import Head from "next/head";
 
 const EventsPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>Bhimraj Resort | Events</title>
+      </Head>
       <section className="my-24 mx-auto max-w-6xl">
         <header>
           <span className="flex items-center">

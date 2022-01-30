@@ -14,10 +14,14 @@ import FancyText from "../lib/components/FancyText";
 import Footer from "../lib/components/Footer";
 import RoomCard from "../lib/components/RoomCard";
 import Layout from "../lib/components/Layout";
+import Head from "next/head";
 
 const Home = () => {
   return (
     <Layout>
+      <Head>
+        <title>Bhimraj Resort | Home</title>
+      </Head>
       <HeroCarousel />
       <section className="text-center w-full py-12 px-6 md:px-0">
         <div>
