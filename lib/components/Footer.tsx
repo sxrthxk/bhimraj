@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-12">
-      <div className="m-auto w-3/4 flex justify-around px-12">
+      <div className="m-auto w-3/4 flex flex-col md:flex-row space-y-6 md:space-y-0 items-center justify-around px-12">
         <div className="space-y-4">
           <h1 className="font-semibold text-xl uppercase">Contact us</h1>
           <ul className="space-y-2">
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full h-px bg-gray-700 my-12"></div>
-      <div className="w-1/5 m-auto flex justify-around">
+      <div className="w-3/5 md:w-1/5 m-auto flex justify-around">
         <a href={urls.fb} target="_blank" rel="noreferrer">
         <AiOutlineInstagram className="w-8 h-8 fill-current text-khaki" />
         </a>
