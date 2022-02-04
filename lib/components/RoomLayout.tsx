@@ -22,14 +22,13 @@ const RoomLayout = ({
       <section className="w-full py-32 bg-[#f5f5f5]">
         <header>
           <FancyText bgText="Awesonme" className="text-6xl">
-            {name + " room"}
+            {name + ((name === "Luxury") ? " rooms" : " room")}
           </FancyText>
         </header>
         {children}
       </section>
-      {imgarr.length && (
+      {imgarr.length ? (
         <>
-          x
           <FancyText bgText={name} className="my-20">
             Room Images
           </FancyText>
@@ -49,7 +48,7 @@ const RoomLayout = ({
             })}
           </div>
         </>
-      )}
+      ) : null}
     </div>
   );
 };
