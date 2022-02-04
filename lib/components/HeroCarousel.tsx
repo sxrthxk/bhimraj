@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import img2 from "../assets/carousel/WhatsApp Image 2022-01-11 at 4.54.23 PM.jpeg";
+import { motion } from "framer-motion";
+
+import img2 from "../assets/carousel/BR RESORT MAIN FRONT PHOTO (1).jpg";
 import img1 from "../assets/carousel/WhatsApp Image 2022-01-11 at 4.54.22 PM.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,7 +11,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectFade, Navigation, Autoplay } from "swiper";
 SwiperCore.use([EffectFade, Navigation, Autoplay]);
 
-const autoplayspeed = 5000;
+const autoplayspeed = 6000;
+
+const changeHandler = () => {
+  console.log("changed")
+}
 
 const HeroCarousel = () => {
 
@@ -23,10 +29,11 @@ const HeroCarousel = () => {
         autoplay={{
           delay: autoplayspeed,
         }}
+        onSlideChange={changeHandler}
       >
         <SwiperSlide>
           <CarouselImage
-            caption="Book Early Save More"
+            caption="feel like home finest heritage property - in heart of india"
             image={img2}
             primaryText="FINEST HOTEL COLLECTION"
             scale={"scale-100"}
@@ -34,7 +41,7 @@ const HeroCarousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <CarouselImage
-            caption="Book Early Save More"
+            caption="feel like home finest heritage property - in heart of india"
             image={img1}
             primaryText="FINEST HOTEL COLLECTION"
             scale={"scale-100"}
@@ -74,12 +81,12 @@ const CarouselImage = ({
           className={"transition-all duration-1000 " + scale}
           alt="Hotel Image"
         />
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl font-serif text-center z-[2]">
+        <motion.h1 animate={{opacity: 1}} transition={{duration: 1}} initial={{opacity: 0}} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-semibold text-white text-3xl drop-shadow-2xl font-serif text-center z-[2]">
           {primaryText}
-          <div className="font-fancy text-gray-300 font-normal py-5 text-6xl drop-shadow-md">
+          <motion.div className="font-fancy text-gray-300 font-normal py-5 text-5xl drop-shadow-md">
             {caption}
-          </div>
-        </h1>
+          </motion.div>
+        </motion.h1>
       </div>
     </>
   );

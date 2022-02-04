@@ -19,7 +19,7 @@ const RoomCard = ({
   learnMore: boolean;
 }) => {
   return (
-    <div className="m-auto w-11/12 md:w-4/5 bg-white flex flex-col md:flex-row my-12 h-auto md:h-[60vh]">
+    <div className="m-auto w-11/12 md:w-4/5 bg-white flex flex-col md:flex-row my-12 h-auto md:h-[60vh] shadow-lg">
       <div className="w-full md:w-1/2 h-64 md:h-auto relative">
         <Image
           placeholder="blur"
