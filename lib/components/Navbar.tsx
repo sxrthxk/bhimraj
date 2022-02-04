@@ -47,7 +47,7 @@ const Navbar = () => {
             about us
           </span>
         </Link>
-        <DropDownLink href="#" linkText="Rooms">
+        <DropDownLink href="/rooms" linkText="Rooms">
           <div className="flex flex-col text-gray-400 space-y-2 font-semibold">
             <span className="hover:text-khaki transition-all">
               <Link href={"/rooms/suite"}>suite</Link>
@@ -102,14 +102,11 @@ const Navbar = () => {
             <Link href="/about-us" passHref>
               <span className="flex justify-between w-full">About Us</span>
             </Link>
-            <span
-              onClick={roomDropDownHandler}
-              className="flex justify-between w-full"
-            >
-              <div className={`${roomDropDown ? "text-khaki" : "text-white"}`}>
+            <span className={`flex justify-between w-full ${roomDropDown ? "text-khaki" : "text-white"}`}>
+              <Link href={"/rooms"}>
                 Rooms
-              </div>
-              <FaCaretRight />
+              </Link>
+              <FaCaretRight onClick={roomDropDownHandler}/>
             </span>
             {roomDropDown && (
               <span className="pl-4 w-full text-left">
@@ -134,16 +131,14 @@ const Navbar = () => {
             {featureDropDown && (
               <span className="pl-4 w-full text-left">
                 <ul className="flex flex-col space-y-3">
-                  <Link href="/$services">Our Services</Link>
+                  <Link href="/#services">Our Services</Link>
                   <Link href="/events">Events</Link>
                   <Link href="/blogs">Blogs</Link>
                 </ul>
               </span>
             )}
             <Link href="/contact" passHref>
-            <span className="flex justify-between w-full">
-              Contact
-            </span>
+              <span className="flex justify-between w-full">Contact</span>
             </Link>
           </ul>
         </div>
