@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../lib/components/Navbar";
 
 import Image from "next/image";
 
@@ -12,10 +11,10 @@ import service4 from "../lib/assets/services/xuanming-U5epRU6sY_A-unsplash.jpg";
 
 import HeroCarousel from "../lib/components/HeroCarousel";
 import FancyText from "../lib/components/FancyText";
-import Footer from "../lib/components/Footer";
 import RoomCard from "../lib/components/RoomCard";
 import Layout from "../lib/components/Layout";
 import Head from "next/head";
+import Animate from "../lib/components/Animate";
 
 const Home = () => {
   return (
@@ -24,131 +23,107 @@ const Home = () => {
         <title>Bhimraj Resort | Home</title>
       </Head>
       <HeroCarousel />
-      <section className="text-center w-full py-12 px-6 md:px-0">
-        <div>
+      {
+        <Animate animateIn="animate__fadeIn">
+          <section className="text-center w-full py-12 px-6 md:px-0">
+            <div>
+              <header className="relative">
+                <FancyText bgText="Welcome">
+                  Wonderful hotel in the heart of India.
+                </FancyText>
+              </header>
+              <p className="max-w-lg text-center px-4 m-auto my-8 text-base">
+                BR Resort is an oasis in the heart of India, Madhya Pradesh.
+                Here the traditional art of hospitality complements the
+                legendary passion of service, creating a unique living
+                experience. Located on Bhopal - Indore highway covered with lush
+                green lawns and hills. Enjoy a comfortable stay in our Luxury
+                Rooms.
+              </p>
+            </div>
+          </section>
+        </Animate>
+      }
+      <Animate animateIn="animate__fadeIn">
+        <section
+          className="text-center w-full py-12 bg-[#f5f5f5] "
+          id="services"
+        >
           <header className="relative">
-            <FancyText bgText="Welcome">
-              Wonderful hotel in the heart of India.
+            <FancyText bgText="Awesome" className="my-10 text-5xl">
+              Services
             </FancyText>
           </header>
-          <p className="max-w-lg text-center px-4 m-auto my-8 text-base">
-            BR Resort is an oasis in the heart of India, Madhya Pradesh. Here
-            the traditional art of hospitality complements the legendary passion
-            of service, creating a unique living experience. Located on Bhopal -
-            Indore highway covered with lush green lawns and hills. Enjoy a
-            comfortable stay in our Luxury Rooms.
-          </p>
-        </div>
-        {/* <a
-          href="#"
-          className="m-auto text-khaki text-xl hover:text-black transition-all"
-        >
-          View our Services
-        </a> */}
-        {/* <div className="w-3/4 m-auto flex space-evenly gap-12 my-12">
-          <div className="w-full relative min-h-[30rem]">
-            <Image
-              placeholder="blur"
-              src={img1}
-              objectFit="cover"
-              layout="fill"
-            ></Image>
+          <div className="w-[90%] m-auto grid gap-12 my-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+            <div className="w-full relative min-h-[30rem]">
+              <Image
+                placeholder="blur"
+                src={service1}
+                objectFit="cover"
+                layout="fill"
+                alt="Restaurant Image"
+              ></Image>
+              <a
+                href="#"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
+              >
+                Restaurant
+              </a>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
+            </div>
+
+            <div className="w-full relative min-h-[30rem]">
+              <Image
+                placeholder="blur"
+                src={service2}
+                objectFit="cover"
+                layout="fill"
+                alt="Spa Image"
+              ></Image>
+              <a
+                href="#"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
+              >
+                Spa
+              </a>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
+            </div>
+            <div className="w-full relative min-h-[30rem]">
+              <Image
+                placeholder="blur"
+                src={service3}
+                objectFit="cover"
+                layout="fill"
+                alt="Pool Image"
+              ></Image>
+              <a
+                href="#"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
+              >
+                Pool
+              </a>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
+            </div>
+            <div className="w-full relative min-h-[30rem]">
+              <Image
+                placeholder="blur"
+                src={service4}
+                objectFit="cover"
+                layout="fill"
+                alt="Activities Image"
+              ></Image>
+              <a
+                href="#"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
+              >
+                Activities
+              </a>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
+            </div>
           </div>
-          <div className="w-full relative min-h-[30rem]">
-            <Image
-              placeholder="blur"
-              src={img1}
-              objectFit="cover"
-              layout="fill"
-            ></Image>
-          </div>
-          <div className="w-full relative min-h-[30rem]">
-            <Image
-              placeholder="blur"
-              src={img1}
-              objectFit="cover"
-              layout="fill"
-            ></Image>
-          </div>
-        </div> */}
-      </section>
-      
-      <section
-        className="text-center w-full py-12 bg-[#f5f5f5] "
-        id="services"
-      >
-        <header className="relative">
-          <FancyText bgText="Awesome" className="my-10 text-5xl">
-            Services
-          </FancyText>
-        </header>
-        <div className="w-[90%] m-auto grid gap-12 my-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-          <div className="w-full relative min-h-[30rem]">
-            <Image
-              placeholder="blur"
-              src={service1}
-              objectFit="cover"
-              layout="fill"
-              alt="Restaurant Image"
-            ></Image>
-            <a
-              href="#"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
-            >
-              Restaurant
-            </a>
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
-          </div>
-          <div className="w-full relative min-h-[30rem]">
-            <Image
-              placeholder="blur"
-              src={service2}
-              objectFit="cover"
-              layout="fill"
-              alt="Spa Image"
-            ></Image>
-            <a
-              href="#"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
-            >
-              Spa
-            </a>
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
-          </div>
-          <div className="w-full relative min-h-[30rem]">
-            <Image
-              placeholder="blur"
-              src={service3}
-              objectFit="cover"
-              layout="fill"
-              alt="Pool Image"
-            ></Image>
-            <a
-              href="#"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
-            >
-              Pool
-            </a>
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
-          </div>
-          <div className="w-full relative min-h-[30rem]">
-            <Image
-              placeholder="blur"
-              src={service4}
-              objectFit="cover"
-              layout="fill"
-              alt="Activities Image"
-            ></Image>
-            <a
-              href="#"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white uppercase font-semibold text-xl drop-shadow-lg z-[1]"
-            >
-              Activities
-            </a>
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </Animate>
+      <Animate animateIn="animate__fadeIn">
       <section className="text-center w-full py-12">
         <div>
           <header className="relative">
@@ -170,6 +145,7 @@ const Home = () => {
           />
         </div>
       </section>
+      </Animate>
     </Layout>
   );
 };

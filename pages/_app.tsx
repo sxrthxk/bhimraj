@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "swiper/css/bundle";
 import type { AppProps } from "next/app";
 import { motion } from "framer-motion";
+import "animate.css/animate.min.css"
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
