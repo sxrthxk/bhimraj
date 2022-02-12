@@ -13,6 +13,7 @@ import img6 from "../../lib/assets/rooms/exec/images/photo_2022-01-30_18-45-09.j
 import img7 from "../../lib/assets/rooms/exec/images/photo_2022-01-30_18-45-10 (2).jpg"
 import img8 from "../../lib/assets/rooms/exec/images/photo_2022-01-30_18-45-10.jpg"
 import Head from "next/head";
+import Animate from "../../lib/components/Animate";
 
 
 const ExecutiveRoom = () => {
@@ -22,6 +23,7 @@ const ExecutiveRoom = () => {
         <title>Bhimraj Resort | Executive Room</title>
       </Head>
       <RoomLayout name="Executive" bg={roomImg} imgarr={[img1, img2, img3, img4, img5, img6, img7, img8]}>
+        <Animate animateIn="animate__fadeIn">
         <RoomCard
           link="/rooms/suite/"
           roomData={{
@@ -34,6 +36,7 @@ const ExecutiveRoom = () => {
           src={roomImg}
           learnMore={false}
         />
+        </Animate>
       </RoomLayout>
     </Layout>
     )
