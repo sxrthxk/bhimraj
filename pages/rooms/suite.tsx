@@ -12,6 +12,7 @@ import img6 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-27.
 import img4 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-26 (2).jpg";
 import Head from "next/head";
 import Animate from "../../lib/components/Animate";
+import RoomDetails from "../../lib/components/RoomDetails";
 
 const SuitePage = () => {
   return (
@@ -30,7 +31,7 @@ const SuitePage = () => {
             roomData={{
               caption: "A quality room with sea or mountain view",
               description:
-                "Luxury Single Room Art Suite has a comfortable queen size or twin bed, a sitting area, separate desk and bathroom with walk-in rain dance shower or a bath and shower and modern art and neutral colors.",
+                "Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
               rate: "400/Night",
               title: "LUXURY DOUBLE ROOM SUITE",
             }}
@@ -38,6 +39,16 @@ const SuitePage = () => {
             learnMore={false}
           />
         </Animate>
+        <RoomDetails
+          longtext={[
+            "Luxuary Suite Room - Luxury Suite Room has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
+            "The rooms come with full amenities: Flat Screen TV, Wi-Fi, air-conditioning, minibar, complimentary breakfast and in room coffee & tea facilities.",
+          ]}
+          details={{
+            Bed: "Queen",
+            Occupancy: "2 Persons",
+          }}
+        />
       </RoomLayout>
     </Layout>
   );

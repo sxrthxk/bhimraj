@@ -33,7 +33,7 @@ const ExecutiveRoom = () => {
             roomData={{
               caption: "A quality room with sea or mountain view",
               description:
-                "Luxury Single Room Art Suite has a comfortable queen size or twin bed, a sitting area, separate desk and bathroom with walk-in rain dance shower or a bath and shower and modern art and neutral colors.",
+                "Executive Room - Executive Room has a comfortable king size bed, a sitting, separate desk and bathroom.",
               rate: "400/Night",
               title: "LUXURY DOUBLE ROOM EXECUTIVE",
             }}

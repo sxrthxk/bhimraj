@@ -13,6 +13,7 @@ import img6 from "../../lib/assets/rooms/deluxe/images/photo_2022-01-30_18-44-15
 import img7 from "../../lib/assets/rooms/deluxe/images/photo_2022-01-30_18-44-16.jpg";
 import Head from "next/head";
 import Animate from "../../lib/components/Animate";
+import RoomDetails from "../../lib/components/RoomDetails";
 
 const DeluxeRoom = () => {
   return (
@@ -31,7 +32,7 @@ const DeluxeRoom = () => {
             roomData={{
               caption: "A quality room with sea or mountain view",
               description:
-                "Luxury Single Room Art Suite has a comfortable queen size or twin bed, a sitting area, separate desk and bathroom with walk-in rain dance shower or a bath and shower and modern art and neutral colors.",
+                "Luxury Suite Room Suite has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
               rate: "400/Night",
               title: "LUXURY DOUBLE ROOM DELUXE",
             }}
@@ -39,6 +40,16 @@ const DeluxeRoom = () => {
             learnMore={false}
           />
         </Animate>
+        <RoomDetails
+          longtext={[
+            "Deluxe Room - Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
+            "The rooms come with full amenities; Flat Screen TV, Wi-Fi, air-conditioning, and complimentary breakfast.",
+          ]}
+          details={{
+            Bed: "Queen",
+            Occupancy: "2 Persons",
+          }}
+        />
       </RoomLayout>
     </Layout>
   );

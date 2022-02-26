@@ -2,6 +2,9 @@ import React from "react";
 import Layout from "../../lib/components/Layout";
 import RoomLayout from "../../lib/components/RoomLayout";
 import roomImg from "../../lib/assets/rooms/exec/photo_2022-01-17_15-34-36.jpg";
+import execRoomImg from "../../lib/assets/rooms/exec/photo_2022-01-17_15-34-36.jpg";
+import deluxeRoomImg from "../../lib/assets/rooms/deluxe/photo_2022-01-17_15-32-51.jpg";
+import suiteRoomImg from "../../lib/assets/rooms/suite/photo_2022-01-17_15-37-37.jpg"
 
 import Head from "next/head";
 import Image from "next/image";
@@ -21,22 +24,22 @@ const RoomPage = () => {
         <section className="max-w-6xl px-6 flex flex-col lg:flex-row m-auto gap-12 justify-left my-12">
           {[
             {
-              image: roomImg,
-              title: "Room Info",
+              image: execRoomImg,
+              title: "Executive",
+              price: 500,
+              slug: "executive"
+            },
+            {
+              image: deluxeRoomImg,
+              title: "Deluxe",
               price: 500,
               slug: "deluxe"
             },
             {
-              image: roomImg,
-              title: "Room Info",
+              image: suiteRoomImg,
+              title: "Suite",
               price: 500,
-              slug: "deluxe"
-            },
-            {
-              image: roomImg,
-              title: "Room Info",
-              price: 500,
-              slug: "deluxe"
+              slug: "suite"
             },
           ].map((room, index) => {
             return (
