@@ -80,11 +80,7 @@ const Navbar = () => {
           </span>
         </Link>
       </div>
-      <Link href={"/contact"} passHref>
-        <div className="bg-khaki hover:bg-black p-3 md:p-6 transition-all flex justify-center items-center min-w-max px-12 cursor-pointer w-2/12 m-auto my-3 md:my-0">
-          <h1>BOOK NOW</h1>
-        </div>
-      </Link>
+      <BookNow />
       <button className="m-auto mb-4 block md:hidden" onClick={toggleDropDown}>
         <FaBars className="fill-current text-black w-6 h-6 mb-3" />
       </button>
@@ -102,11 +98,13 @@ const Navbar = () => {
             <Link href="/about-us" passHref>
               <span className="flex justify-between w-full">About Us</span>
             </Link>
-            <span className={`flex justify-between w-full ${roomDropDown ? "text-khaki" : "text-white"}`}>
-              <Link href={"/rooms"}>
-                Rooms
-              </Link>
-              <FaCaretRight onClick={roomDropDownHandler}/>
+            <span
+              className={`flex justify-between w-full ${
+                roomDropDown ? "text-khaki" : "text-white"
+              }`}
+            >
+              <Link href={"/rooms"}>Rooms</Link>
+              <FaCaretRight onClick={roomDropDownHandler} />
             </span>
             {roomDropDown && (
               <span className="pl-4 w-full text-left">
@@ -148,3 +146,13 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+export const BookNow = () => {
+  return (
+    <Link href={"/contact"} passHref>
+      <div className="bg-khaki hover:bg-black p-3 md:p-6 transition-all flex justify-center items-center min-w-max px-12 cursor-pointer w-2/12 m-auto my-3 md:my-0">
+        <h1>BOOK NOW</h1>
+      </div>
+    </Link>
+  );
+};
