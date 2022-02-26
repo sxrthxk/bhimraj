@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
 const RoomDetails = ({
@@ -36,8 +36,8 @@ const RoomDetails = ({
           </h1>
         ))}
       </header>
-      <div className="text-xl max-w-3xl font-light my-12">
-        {elements[selected].el}
+      <div className="text-xl max-w-3xl overflow-hidden font-light my-12">
+        <AnimatePresence>{elements[selected].el}</AnimatePresence>
       </div>
       <div>
         <h1 className="font-serif uppercase text-2xl">Room Details</h1>
@@ -62,8 +62,9 @@ export default RoomDetails;
 const RoomServices = () => {
   return (
     <motion.div
-      initial={{ x: 100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "max-content" }}
+      exit={{ opacity: 0, height: 0 }}
       transition={{
         bounce: 0,
         ease: "easeInOut",
@@ -77,8 +78,9 @@ const RoomServices = () => {
 const Description = ({ details }: { details: string[] }) => {
   return (
     <motion.div
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "max-content" }}
+      exit={{ opacity: 0, height: 0 }}
       transition={{
         bounce: 0,
         ease: "easeInOut",
