@@ -10,7 +10,7 @@ const RoomLayout = ({
   bg,
   imgarr,
 }: {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
   name: string;
   bg: StaticImageData;
   imgarr: StaticImageData[];
