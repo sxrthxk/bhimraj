@@ -25,19 +25,19 @@ const RoomPage = () => {
           {[
             {
               image: execRoomImg,
-              title: "Executive",
+              title: "Luxury Executive Room",
               price: 500,
               slug: "executive"
             },
             {
               image: deluxeRoomImg,
-              title: "Deluxe",
+              title: "Luxury Deluxe Room",
               price: 500,
               slug: "deluxe"
             },
             {
               image: suiteRoomImg,
-              title: "Suite",
+              title: "Luxury Suite Room",
               price: 500,
               slug: "suite"
             },
@@ -54,7 +54,7 @@ const RoomPage = () => {
                       className="scale-100 hover:scale-110 transition-all ease-out duration-300"
                     />
                   </div>
-                  <div className="text-black mt-3 text-2xl">
+                  <div className="text-black mt-3 text-2xl uppercase font-serif">
                     {room.title}
                   </div>
                   <div className="text-khaki my-1 text-xl">
