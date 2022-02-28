@@ -31,6 +31,10 @@ const RoomLayout = ({
           <FancyText bgText={name} className="my-20">
             Room Images
           </FancyText>
+          <div className="bg-green-400">
+            font
+      </div>
+
           <div className="w-full px-6 md:px-12 m-auto gap-12 my-24 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
             {imgarr.map((img, index) => {
               return (
