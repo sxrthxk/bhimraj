@@ -8,7 +8,6 @@ import Image from "next/image";
 import goibibo from "../lib/assets/contact/goibibo.png";
 import booking from "../lib/assets/contact/booking.png";
 import Head from "next/head";
-import Geo from "../lib/components/Geo";
 import Link from "next/link";
 
 const contact = () => {
