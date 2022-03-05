@@ -27,7 +27,7 @@ const RoomDetails = ({
 
   return (
     <section className="w-11/12 md:w-4/5 m-auto">
-      <header className="flex font-normal text-2xl md:text-3xl uppercase space-x-8 my-3">
+      <header className="flex flex-col md:flex-row font-normal text-2xl md:text-3xl uppercase space-x-0 space-y-2 md:space-y-0 md:space-x-8 my-3">
         {elements.map(({ title }, index) => (
           <h1
             className={`cursor-pointer transition-all ${

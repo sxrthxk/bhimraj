@@ -41,7 +41,7 @@ const DeluxeRoom = () => {
             src={roomImg}
             learnMore={false}
           />
-         <div className="w-11/12 md:w-4/5 m-auto flex flex-wrap space-x-8 justify-center my-12">
+         <div className="w-11/12 md:w-4/5 px-6 md:px-8 lg:px-24 m-auto flex flex-wrap justify-evenly my-12">
            <Service data={icons.bath}/>
            <Service data={icons.airconditioner}/>
            <Service data={icons.phone}/>
