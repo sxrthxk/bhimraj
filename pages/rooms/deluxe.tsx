@@ -47,8 +47,14 @@ const DeluxeRoom = () => {
             "The rooms come with full amenities; Flat Screen TV, Wi-Fi, air-conditioning, and complimentary breakfast.",
           ]}
           details={{
-            Bed: "Single Twin Size",
-            Occupancy: "2 Persons",
+            "Bed": "Single Twin Size",
+            "Occupancy": "2 Persons",
+            "Room Service Timing": "7AM - 11PM",
+            "Spa Timing": "9AM - 7PM",
+            "Club/Pool Timing": "9AM - 7PM",
+            "Bathroom": "Yes",
+            "Cable TV": "Yes",
+            "Air Conditioner": "Yes",
           }}
           serviceIconsData={[
             icons.bath,

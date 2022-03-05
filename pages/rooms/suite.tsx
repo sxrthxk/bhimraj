@@ -46,8 +46,17 @@ const SuitePage = () => {
             "The rooms come with full amenities: Flat Screen TV, Wi-Fi, air-conditioning, minibar, complimentary breakfast and in room coffee & tea facilities.",
           ]}
           details={{
-            Bed: "King Size",
-            Occupancy: "2 Persons",
+            "Bed": "King Size",
+            "Occupancy": "2 Persons",
+            "Restaurant Timing": "7AM - 11PM",
+            "Room Service Timing": "7AM - 11PM",
+            "Spa Timing": "9AM - 7PM",
+            "Club/Pool Timing": "9AM - 7PM",
+            "Bathroom": "Yes",
+            "Cable TV": "Yes",
+            "Air Conditioner": "Yes",
+            "Mini Bar": "Yes",
+            "Compilmentary Tea/Coffee": "Yes"
           }}
           serviceIconsData={[
             icons.bath,

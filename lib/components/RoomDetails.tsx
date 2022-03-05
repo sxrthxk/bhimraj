@@ -65,7 +65,7 @@ const RoomDetails = ({
           {Object.keys(details).map((k, index) => (
             <div
               key={index}
-              className="w-full border-b-2 border-gray-200 flex justify-between font-serif text-xl py-1 my-2"
+              className="w-full border-b-2 border-gray-200 flex justify-between font-sans font-thin text-xl py-1 my-2"
             >
               <span>{k}</span>
               <span>{details[k]}</span>

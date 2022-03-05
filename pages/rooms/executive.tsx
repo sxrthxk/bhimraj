@@ -50,8 +50,15 @@ const ExecutiveRoom = () => {
             "The rooms come with full amenities; Flat Screen TV, Wi-Fi,  air-conditioning,  and complimentary breakfast, and in room coffee & tea facilities.",
           ]}
           details={{
-            Bed: "King Size",
-            Occupancy: "2 Persons",
+            "Bed": "King Size",
+            "Occupancy": "2 Persons",
+            "Room Service Timing": "7AM - 11PM",
+            "Spa Timing": "9AM - 7PM",
+            "Club/Pool Timing": "9AM - 7PM",
+            "Bathroom": "Yes",
+            "Cable TV": "Yes",
+            "Air Conditioner": "Yes",
+            "Compilmentary Tea/Coffee": "Yes"
           }}
           serviceIconsData={[
             icons.bath,
