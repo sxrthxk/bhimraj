@@ -25,19 +25,19 @@ const RoomPage = () => {
             {
               image: suiteRoomImg,
               title: "Luxury Suite Room",
-              price: 500,
+              price: 2500,
               slug: "suite",
             },
             {
               image: execRoomImg,
               title: "Luxury Executive Room",
-              price: 500,
+              price: 2800,
               slug: "executive",
             },
             {
               image: deluxeRoomImg,
               title: "Deluxe Room",
-              price: 500,
+              price: 3800,
               slug: "deluxe",
             },
           ].map((room, index) => {
@@ -57,9 +57,11 @@ const RoomPage = () => {
                       className="scale-100 hover:scale-110 transition-all ease-out duration-300"
                     />
                   </div>
-                  <div className="text-black mt-3 text-2xl uppercase font-serif">{room.title}</div>
+                  <div className="text-black mt-3 text-2xl uppercase font-serif">
+                    {room.title}
+                  </div>
                   <div className="text-khaki my-1 text-xl">
-                    {room.price + " / NIGHT"}
+                    {"₹" + room.price + " / NIGHT"}
                   </div>
                 </Animate>
               </div>

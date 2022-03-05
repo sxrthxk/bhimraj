@@ -13,6 +13,8 @@ import img4 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-26 
 import Head from "next/head";
 import Animate from "../../lib/components/Animate";
 import RoomDetails from "../../lib/components/RoomDetails";
+import Service from "../../lib/components/Service";
+import { icons } from "../../lib/components/icons";
 
 const SuitePage = () => {
   return (
@@ -39,6 +41,13 @@ const SuitePage = () => {
             learnMore={false}
           />
         </Animate>
+        <div className="w-11/12 md:w-4/5 m-auto flex flex-wrap space-x-8 justify-center my-12">
+           <Service data={icons.bath}/>
+           <Service data={icons.airconditioner}/>
+           <Service data={icons.drinks}/>
+           <Service data={icons.dryer}/>
+           <Service data={icons.phone}/>
+         </div>
         <RoomDetails
           longtext={[
             "Luxuary Suite Room - Luxury Suite Room has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
