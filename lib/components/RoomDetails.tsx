@@ -24,10 +24,10 @@ const RoomDetails = ({
       title: "Description",
       el: <Description details={longtext} />,
     },
-    {
-      title: "Room Services",
-      el: <RoomServices />,
-    },
+    // {
+    //   title: "Room Services",
+    //   el: <RoomServices />,
+    // },
     {
       title: "Prices",
       el: <Prices price={price} serviceIconsData={serviceIconsData} />,

@@ -70,7 +70,7 @@ const Navbar = () => {
               <Link href={"/events"}>events</Link>
             </span>
             <span className="hover:text-khaki transition-all">
-              <Link href={"/blogs"}>blogs</Link>
+              <Link href={"/gallery"}>gallery</Link>
             </span>
           </div>
         </DropDownLink>

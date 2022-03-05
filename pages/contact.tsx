@@ -21,9 +21,9 @@ const contact = () => {
         <FancyText bgText="Connect" className="text-6xl">
           Get In Touch
         </FancyText>
-        <div className="flex flex-col md:flex-row justify-evenly items-center py-24">
+        <div className="flex flex-col md:flex-row justify-evenly items-center py-12">
           <a
-            href={"https://goibibo.com"}
+            href={"https://www.goibibo.com/hotels/br-resort-and-club-hotel-in-sonkach-8288936628790380610/"}
             target="_blank"
             rel="noreferrer"
             className="w-2/6 md:w-1/6 my-6 cursor-pointer"
@@ -31,7 +31,7 @@ const contact = () => {
             <Image src={goibibo} objectFit="cover" alt="GoIbibo Logo" />
           </a>
           <a
-            href={"https://booking.com"}
+            href={"https://www.booking.com/hotel/in/br-resort-amp-club.en-gb.html"}
             target="_blank"
             rel="noreferrer"
             className="w-2/6 md:w-1/6 my-6 cursor-pointer"
