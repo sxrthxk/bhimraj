@@ -17,6 +17,10 @@ const RoomDetails = ({
       title: "Room Services",
       el: <RoomServices />,
     },
+    {
+      title: "Prices",
+      el: <Prices />
+    }
   ];
 
   const [selected, setSelected] = useState(0);
@@ -95,3 +99,9 @@ const Description = ({ details }: { details: string[] }) => {
     </motion.div>
   );
 };
+
+const Prices = () => {
+  return <div>
+    Prices
+  </div>
+}

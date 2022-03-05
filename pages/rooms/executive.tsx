@@ -25,7 +25,7 @@ const ExecutiveRoom = () => {
       <RoomLayout
         name="Executive"
         bg={roomImg}
-        imgarr={[img1, img2, img3, img4, img5, img6, img7, img8]}
+        imgarr={[img1, img2, img5, img6, img8]}
       >
         <Animate animateIn="animate__fadeIn">
           <RoomCard
@@ -34,7 +34,7 @@ const ExecutiveRoom = () => {
               caption: "A quality room with sea or mountain view",
               description:
                 "Executive Room - Executive Room has a comfortable king size bed, a sitting, separate desk and bathroom.",
-              rate: "400/Night",
+              rate: "₹2800/Night",
               title: "LUXURY DOUBLE ROOM EXECUTIVE",
             }}
             src={roomImg}

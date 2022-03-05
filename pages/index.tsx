@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import img1 from "../lib/assets/carousel/WhatsApp Image 2022-01-11 at 4.54.22 PM.jpeg";
+import img1 from "../lib/assets/rooms/suite/photo_2022-01-17_15-37-37.jpg";
 
 import service1 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.18 PM (1).jpeg";
 import service2 from "../lib/assets/services/WhatsApp Image 2022-01-11 at 3.54.19 PM.jpeg";
@@ -132,16 +132,16 @@ const Home = () => {
             </FancyText>
           </header>
           <RoomCard
-            learnMore
             link="/rooms/suite/"
             roomData={{
               caption: "A quality room with sea or mountain view",
               description:
-                "Luxury Single Room Art Suite has a comfortable queen size or twin bed, a sitting area, separate desk and bathroom with walk-in rain dance shower or a bath and shower and modern art and neutral colors.",
-              rate: "400/Night",
-              title: "LUXURY DOUBLE ROOM SUITE",
+                "Luxury Suite Room Suite has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
+              rate: "₹3800/Night",
+              title: "LUXURY DOUBLE ROOM DELUXE",
             }}
             src={img1}
+            learnMore={false}
           />
         </div>
       </section>

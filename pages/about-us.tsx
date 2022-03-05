@@ -1,9 +1,9 @@
 import React from "react";
 import Hero from "../lib/components/Hero";
 import Layout from "../lib/components/Layout";
-import hero from "../lib/assets/about/hero.jpg";
+import hero from "../lib/assets/carousel/BR RESORT MAIN FRONT PHOTO (1).jpg";
 import FancyText from "../lib/components/FancyText";
-import sectionimg from "../lib/assets/about/section.jpg";
+import sectionimg from "../lib/assets/about/aboutus.jpg";
 import Image from "next/image";
 import Head from "next/head";
 import { BookNow } from "../lib/components/Navbar";

@@ -47,7 +47,7 @@ const HeroCarousel = () => {
             image={img1}
             primaryText="FINEST HOTEL COLLECTION"
             scale={"scale-100"}
-            animKey={slide}
+            animKey={slide + 1}
           />
         </SwiperSlide>
       </Swiper>

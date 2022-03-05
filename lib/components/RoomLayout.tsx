@@ -21,7 +21,7 @@ const RoomLayout = ({
       <section className="w-full py-32 bg-[#f5f5f5]">
         <header>
           <FancyText bgText="Awesonme" className="text-6xl">
-            {name + (name === "Luxury" ? " rooms" : " room")}
+            {"Luxury " + name + (name === "Luxury" ? " rooms" : " room")}
           </FancyText>
         </header>
         {children}

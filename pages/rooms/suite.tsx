@@ -32,7 +32,7 @@ const SuitePage = () => {
               caption: "A quality room with sea or mountain view",
               description:
                 "Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
-              rate: "400/Night",
+              rate: "₹2500/Night",
               title: "LUXURY DOUBLE ROOM SUITE",
             }}
             src={roomImg}

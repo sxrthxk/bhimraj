@@ -1,8 +1,12 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 import { AiOutlineInstagram, AiOutlinePhone } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
+import logo from "../assets/logo_compressed.png";
+import Logo from "./Logo";
 
 const Footer = () => {
   const urls = {
@@ -27,7 +31,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <GoLocation className="min-w-[1rem] min-h-[1rem]"/>
+                <GoLocation className="min-w-[1rem] min-h-[1rem]" />
                 <span className="max-w-sm">
                   Indore - Bhopal Highway, Arniya Village near Sonkatch, Dist.
                   Dewas 455118 (M.P.)
@@ -36,32 +40,32 @@ const Footer = () => {
             </li>
             <li>
               <div className="flex items-center space-x-3 ">
-                <AiOutlinePhone className="min-w-[1rem] min-h-[1rem]"/>
+                <AiOutlinePhone className="min-w-[1rem] min-h-[1rem]" />
                 <div className="flex flex-col space-y-2">
-                <a
-                  href={urls.phone1}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-khaki transition-all"
-                >
-                  88199-20202{" "}
-                </a>
-                <a
-                  href={urls.phone2}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-khaki transition-all"
-                >
-                  88188-80310{" "}
-                </a>
-                <a
-                  href={urls.phone3}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-khaki transition-all"
-                >
-                  9343871771
-                </a>
+                  <a
+                    href={urls.phone1}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-khaki transition-all"
+                  >
+                    88199-20202{" "}
+                  </a>
+                  <a
+                    href={urls.phone2}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-khaki transition-all"
+                  >
+                    88188-80310{" "}
+                  </a>
+                  <a
+                    href={urls.phone3}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-khaki transition-all"
+                  >
+                    93438-71771
+                  </a>
                 </div>
               </div>
             </li>
@@ -77,7 +81,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaFacebookF className="min-h-[1rem] min-w-[1rem]"/>
+                <FaFacebookF className="min-h-[1rem] min-w-[1rem]" />
                 <span>Facebook</span>
               </a>
             </li>
@@ -88,7 +92,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <AiOutlineInstagram className="min-h-[1rem] min-w-[1rem]"/>
+                <AiOutlineInstagram className="min-h-[1rem] min-w-[1rem]" />
                 <span>Instagram</span>
               </a>
             </li>
@@ -104,6 +108,17 @@ const Footer = () => {
           <FaFacebookF className="w-8 h-8 fill-current text-khaki" />
         </a>
       </div>
+      <Link href="/" passHref>
+        <div className="relative w-full m-auto mt-4 md:w-2/12 min-h-[6rem] md:h-full p-5 flex justify-center bg-black cursor-pointer">
+          <Image
+            src={logo}
+            layout="fill"
+            objectFit="contain"
+            placeholder="blur"
+            alt="Logo"
+          />
+        </div>
+      </Link>
     </footer>
   );
 };
