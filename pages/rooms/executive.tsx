@@ -27,7 +27,7 @@ const ExecutiveRoom = () => {
       <RoomLayout
         name="Executive"
         bg={roomImg}
-        imgarr={[img1, img2, img5, img6, img8]}
+        imgarr={[img8, img1, img2, img5, img6]}
       >
         <Animate animateIn="animate__fadeIn">
           <RoomCard
@@ -46,9 +46,11 @@ const ExecutiveRoom = () => {
         <div className="w-11/12 md:w-4/5 m-auto flex flex-wrap space-x-8 justify-center my-12">
            <Service data={icons.bath}/>
            <Service data={icons.airconditioner}/>
-           <Service data={icons.drinks}/>
-           <Service data={icons.dryer}/>
            <Service data={icons.phone}/>
+           <Service data={icons.tea}/>
+           <Service data={icons.tv}/>
+           <Service data={icons.wifi}/>
+
          </div>
         <RoomDetails
           longtext={[
@@ -57,7 +59,7 @@ const ExecutiveRoom = () => {
             "The rooms come with full amenities; Flat Screen TV, Wi-Fi,  air-conditioning,  and complimentary breakfast, and in room coffee & tea facilities.",
           ]}
           details={{
-            "Bed": "Queen",
+            "Bed": "King Size",
             "Occupancy": "2 Persons"
           }}
         />

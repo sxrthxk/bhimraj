@@ -45,8 +45,12 @@ const SuitePage = () => {
            <Service data={icons.bath}/>
            <Service data={icons.airconditioner}/>
            <Service data={icons.drinks}/>
-           <Service data={icons.dryer}/>
-           <Service data={icons.phone}/>
+           <Service data={icons.tea}/>
+           <Service data={icons.tv}/>
+           <Service data={icons.wifi}/>
+
+           
+
          </div>
         <RoomDetails
           longtext={[
@@ -54,7 +58,7 @@ const SuitePage = () => {
             "The rooms come with full amenities: Flat Screen TV, Wi-Fi, air-conditioning, minibar, complimentary breakfast and in room coffee & tea facilities.",
           ]}
           details={{
-            Bed: "Queen",
+            Bed: "King Size",
             Occupancy: "2 Persons",
           }}
         />

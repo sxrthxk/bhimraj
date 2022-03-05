@@ -44,9 +44,11 @@ const DeluxeRoom = () => {
          <div className="w-11/12 md:w-4/5 m-auto flex flex-wrap space-x-8 justify-center my-12">
            <Service data={icons.bath}/>
            <Service data={icons.airconditioner}/>
-           <Service data={icons.drinks}/>
-           <Service data={icons.dryer}/>
            <Service data={icons.phone}/>
+           <Service data={icons.tv}/>
+           <Service data={icons.wifi}/>
+
+
          </div>
         </Animate>
         <RoomDetails
@@ -55,7 +57,7 @@ const DeluxeRoom = () => {
             "The rooms come with full amenities; Flat Screen TV, Wi-Fi, air-conditioning, and complimentary breakfast.",
           ]}
           details={{
-            Bed: "Queen",
+            Bed: "Single Twin Size",
             Occupancy: "2 Persons",
           }}
         />

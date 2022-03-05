@@ -19,12 +19,12 @@ const AboutUsPage = () => {
         <FancyText bgText="Our Story" className="my-12">
           History begins in 1985
         </FancyText>
-        <div className="m-auto relative w-11/12 md:w-3/5 h-[50vh] mt-24">
+        <div className="m-auto relative w-11/12 md:w-3/5  mt-24">
           <Image
             src={sectionimg}
             placeholder="blur"
             objectFit="cover"
-            layout="fill"
+            layout="responsive"
             alt="Hotel Image"
           />
         </div>
