@@ -25,7 +25,7 @@ const RoomPage = () => {
             {
               image: suiteRoomImg,
               title: "Luxury Suite Room",
-              price: 2500,
+              price: 3800,
               slug: "suite",
             },
             {
@@ -37,7 +37,7 @@ const RoomPage = () => {
             {
               image: deluxeRoomImg,
               title: "Deluxe Room",
-              price: 3800,
+              price: 2500,
               slug: "deluxe",
             },
           ].map((room, index) => {

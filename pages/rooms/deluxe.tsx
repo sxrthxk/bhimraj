@@ -14,7 +14,6 @@ import img7 from "../../lib/assets/rooms/deluxe/images/photo_2022-01-30_18-44-16
 import Head from "next/head";
 import Animate from "../../lib/components/Animate";
 import RoomDetails from "../../lib/components/RoomDetails";
-import Service from "../../lib/components/Service";
 import { icons } from "../../lib/components/icons";
 
 const DeluxeRoom = () => {
@@ -35,7 +34,7 @@ const DeluxeRoom = () => {
               caption: "A quality room with sea or mountain view",
               description:
                 "Luxury Suite Room Suite has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
-              rate: "₹3800/Night",
+            rate: "₹2500/Night",
               title: "LUXURY DOUBLE ROOM DELUXE",
             }}
             src={roomImg}
@@ -60,8 +59,8 @@ const DeluxeRoom = () => {
           ]}
           price={
             {
-              double: "3800",
-              single: "3200"
+              double: "2500",
+              single: "1800"
             }
           }
         />

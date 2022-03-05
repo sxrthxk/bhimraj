@@ -13,7 +13,6 @@ import img4 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-26 
 import Head from "next/head";
 import Animate from "../../lib/components/Animate";
 import RoomDetails from "../../lib/components/RoomDetails";
-import Service from "../../lib/components/Service";
 import { icons } from "../../lib/components/icons";
 
 const SuitePage = () => {
@@ -34,7 +33,7 @@ const SuitePage = () => {
               caption: "A quality room with sea or mountain view",
               description:
                 "Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
-              rate: "₹2500/Night",
+              rate: "₹3800/Night",
               title: "LUXURY DOUBLE ROOM SUITE",
             }}
             src={roomImg}
@@ -59,8 +58,8 @@ const SuitePage = () => {
             icons.wifi,
           ]}
           price={{
-            double: "2500",
-            single: "1800"
+            double: "3800",
+            single: "3200"
           }}
         />
       </RoomLayout>
