@@ -41,17 +41,6 @@ const SuitePage = () => {
             learnMore={false}
           />
         </Animate>
-        <div className="w-11/12 md:w-4/5 px-6 md:px-8 lg:px-24 m-auto flex flex-wrap justify-evenly my-12">
-           <Service data={icons.bath}/>
-           <Service data={icons.airconditioner}/>
-           <Service data={icons.drinks}/>
-           <Service data={icons.tea}/>
-           <Service data={icons.tv}/>
-           <Service data={icons.wifi}/>
-
-           
-
-         </div>
         <RoomDetails
           longtext={[
             "Luxuary Suite Room - Luxury Suite Room has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
@@ -60,6 +49,18 @@ const SuitePage = () => {
           details={{
             Bed: "King Size",
             Occupancy: "2 Persons",
+          }}
+          serviceIconsData={[
+            icons.bath,
+            icons.airconditioner,
+            icons.drinks,
+            icons.tea,
+            icons.tv,
+            icons.wifi,
+          ]}
+          price={{
+            double: "2500",
+            single: "1800"
           }}
         />
       </RoomLayout>

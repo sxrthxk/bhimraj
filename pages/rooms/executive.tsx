@@ -43,15 +43,6 @@ const ExecutiveRoom = () => {
             learnMore={false}
           />
         </Animate>
-        <div className="w-11/12 md:w-4/5 px-6 md:px-8 lg:px-24 m-auto flex flex-wrap justify-evenly my-12">
-           <Service data={icons.bath}/>
-           <Service data={icons.airconditioner}/>
-           <Service data={icons.phone}/>
-           <Service data={icons.tea}/>
-           <Service data={icons.tv}/>
-           <Service data={icons.wifi}/>
-
-         </div>
         <RoomDetails
           longtext={[
             "Executive Room - Executive Room has a comfortable king size bed, a sitting, separate desk and bathroom.",
@@ -59,8 +50,20 @@ const ExecutiveRoom = () => {
             "The rooms come with full amenities; Flat Screen TV, Wi-Fi,  air-conditioning,  and complimentary breakfast, and in room coffee & tea facilities.",
           ]}
           details={{
-            "Bed": "King Size",
-            "Occupancy": "2 Persons"
+            Bed: "King Size",
+            Occupancy: "2 Persons",
+          }}
+          serviceIconsData={[
+            icons.bath,
+            icons.airconditioner,
+            icons.phone,
+            icons.tea,
+            icons.tv,
+            icons.wifi,
+          ]}
+          price={{
+            single: "2200",
+            double: "2800"
           }}
         />
       </RoomLayout>

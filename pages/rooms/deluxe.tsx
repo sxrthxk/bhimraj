@@ -41,15 +41,6 @@ const DeluxeRoom = () => {
             src={roomImg}
             learnMore={false}
           />
-         <div className="w-11/12 md:w-4/5 px-6 md:px-8 lg:px-24 m-auto flex flex-wrap justify-evenly my-12">
-           <Service data={icons.bath}/>
-           <Service data={icons.airconditioner}/>
-           <Service data={icons.phone}/>
-           <Service data={icons.tv}/>
-           <Service data={icons.wifi}/>
-
-
-         </div>
         </Animate>
         <RoomDetails
           longtext={[
@@ -60,6 +51,19 @@ const DeluxeRoom = () => {
             Bed: "Single Twin Size",
             Occupancy: "2 Persons",
           }}
+          serviceIconsData={[
+            icons.bath,
+            icons.airconditioner,
+            icons.phone,
+            icons.tv,
+            icons.wifi,
+          ]}
+          price={
+            {
+              double: "3800",
+              single: "3200"
+            }
+          }
         />
       </RoomLayout>
     </Layout>
