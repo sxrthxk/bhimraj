@@ -131,7 +131,7 @@ const Navbar = () => {
                 <ul className="flex flex-col space-y-3">
                   <Link href="/#services">Our Services</Link>
                   <Link href="/events">Events</Link>
-                  <Link href="/blogs">Blogs</Link>
+                  <Link href="/gallery">Gallery</Link>
                 </ul>
               </span>
             )}
