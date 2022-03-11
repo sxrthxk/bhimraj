@@ -33,6 +33,7 @@ const Galery = ({
                   src={url}
                   objectFit="cover"
                   layout="fill"
+                  placeholder="blur"
                   alt="Gallery Image"
                 />
               </div>
