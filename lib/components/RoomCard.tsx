@@ -32,9 +32,9 @@ const RoomCard = ({
       <div className="flex flex-col items-start justify-evenly w-full md:w-1/2 px-6 md:px-20 py-6 md:py-0 text-left space-y-6 md:space-y-0">
         <header className="">
           <h1 className="text-4xl m-auto">{roomData.title}</h1>
-          <span className="text-lg italic text-gray-400">
+          {/* <span className="text-lg italic text-gray-400">
             {roomData.caption}
-          </span>
+          </span> */}
         </header>
         <p>{roomData.description}</p>
         <div className="flex justify-between w-full">

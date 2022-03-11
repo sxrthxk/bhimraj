@@ -34,7 +34,7 @@ const SuitePage = () => {
               description:
                 "Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
               rate: "₹3800/Night",
-              title: "LUXURY DOUBLE ROOM SUITE",
+              title: "LUXURY SUITE ROOM",
             }}
             src={roomImg}
             learnMore={false}
@@ -42,7 +42,7 @@ const SuitePage = () => {
         </Animate>
         <RoomDetails
           longtext={[
-            "Luxuary Suite Room - Luxury Suite Room has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
+            "Luxury Suite Room - Luxury Suite Room has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
             "The rooms come with full amenities: Flat Screen TV, Wi-Fi, air-conditioning, minibar, complimentary breakfast and in room coffee & tea facilities.",
           ]}
           details={{
