@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../lib/components/Hero";
 import Layout from "../lib/components/Layout";
 import hero from "../lib/assets/carousel/BR RESORT MAIN FRONT PHOTO (1).jpg";
@@ -6,12 +6,15 @@ import FancyText from "../lib/components/FancyText";
 import Head from "next/head";
 import { GetStaticProps, GetStaticPropsContext } from "next";
 import Image from "next/image";
+import client from "../lib/client";
+import { EntryCollection } from "contentful";
 
-const gallery = ({
+const Galery = ({
   data,
 }: {
   data: { id: number; caption: string; url: string }[];
 }) => {
+
   return (
     <Layout>
       <Head>
@@ -34,7 +37,7 @@ const gallery = ({
                 />
               </div>
               <span className="w-full font-sans uppercase text-lg mt-2">
-              {caption}
+                {caption}
               </span>
             </div>
           ))}
@@ -44,21 +47,22 @@ const gallery = ({
   );
 };
 
-export default gallery;
+export default Galery;
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ) => {
-  const data = await (
-    await fetch("https://bhimrajresort.com/wp-json/wp/v2/posts?categories=73&per_page=99")
-  ).json();
+  const data: EntryCollection<{
+    description: string;
+    image: { fields: { file: { url: string } } };
+  }> = await client.getEntries("gallery");
 
   return {
     props: {
-      data: data.map((d: any) => ({
-        id: d.id,
-        caption: d.title.rendered,
-        url: d.yoast_head_json.og_image[0].url,
+      data: data.items.map((d) => ({
+        id: d.sys.id,
+        caption: d.fields.description,
+        url: `https:${d.fields.image.fields.file.url}`,
       })),
     },
   };

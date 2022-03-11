@@ -128,6 +128,7 @@ const CarouselImage = ({
             placeholder="blur"
             src={image}
             layout="fill"
+            priority
             objectFit="cover"
             className={"transition-all duration-1000 " + scale}
             alt="Hotel Image"

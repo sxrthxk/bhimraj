@@ -3,7 +3,7 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: [
-      "bhimrajresort.com"
+      "images.ctfassets.net"
     ]
   }
 }

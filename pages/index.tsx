@@ -15,6 +15,8 @@ import RoomCard from "../lib/components/RoomCard";
 import Layout from "../lib/components/Layout";
 import Head from "next/head";
 import Animate from "../lib/components/Animate";
+import { FaChevronRight } from "react-icons/fa";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -124,27 +126,33 @@ const Home = () => {
         </section>
       </Animate>
       <Animate animateIn="animate__fadeIn">
-      <section className="text-center w-full py-12">
-        <div>
-          <header className="relative">
-            <FancyText bgText="Luxury" className="text-5xl mt-12">
-              Rooms
-            </FancyText>
-          </header>
-          <RoomCard
-            link="/rooms/suite/"
-            roomData={{
-              caption: "A quality room with sea or mountain view",
-              description:
-                "Luxury Suite Room Suite has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
-              rate: "₹2500/Night",
-              title: "LUXURY DELUXE ROOM",
-            }}
-            src={img1}
-            learnMore={false}
-          />
-        </div>
-      </section>
+        <section className="text-center w-full py-12">
+          <div>
+            <header className="relative">
+              <FancyText bgText="Luxury" className="text-5xl mt-12">
+                Rooms
+              </FancyText>
+            </header>
+            <RoomCard
+              link="/rooms/suite/"
+              roomData={{
+                caption: "A quality room with sea or mountain view",
+                description:
+                  "Luxury Suite Room Suite has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
+                rate: "₹2500/Night",
+                title: "LUXURY DELUXE ROOM",
+              }}
+              src={img1}
+              learnMore={false}
+            />
+            <Link href={"/rooms"} passHref>
+              <span className="flex items-center w-fit m-auto font-sans text-lg space-x-3 cursor-pointer p-3 bg-khaki hover:bg-black text-white  rounded-sm transition-all">
+                <span>View More</span>
+                <FaChevronRight />
+              </span>
+            </Link>
+          </div>
+        </section>
       </Animate>
     </Layout>
   );
