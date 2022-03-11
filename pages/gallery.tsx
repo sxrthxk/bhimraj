@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../lib/components/Hero";
 import Layout from "../lib/components/Layout";
 import hero from "../lib/assets/carousel/BR RESORT MAIN FRONT PHOTO (1).jpg";
@@ -14,7 +14,7 @@ const Galery = ({
 }: {
   data: { id: number; caption: string; url: string }[];
 }) => {
-
+  
   return (
     <Layout>
       <Head>
@@ -28,15 +28,7 @@ const Galery = ({
         <div className="m-auto flex flex-wrap justify-center relative w-11/12 md:w-4/5  mt-24 gap-4">
           {data.map(({ id, url, caption }) => (
             <div key={id} className="flex flex-col items-center">
-              <div className="w-60 h-60 relative">
-                <Image
-                  src={url}
-                  objectFit="cover"
-                  layout="fill"
-                  placeholder="blur"
-                  alt="Gallery Image"
-                />
-              </div>
+              <LoadImage url={url} />
               <span className="w-full font-sans uppercase text-lg mt-2">
                 {caption}
               </span>
@@ -49,6 +41,25 @@ const Galery = ({
 };
 
 export default Galery;
+
+const LoadImage = ({ url }: { url: string }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className="w-60 h-60 relative">
+      <Image
+        src={url}
+        objectFit="cover"
+        layout="fill"
+        onLoad={() => setLoaded(true)}
+        alt="Gallery Image"
+      />
+      {!loaded && (
+        <div className="absolute top-0 left-0 w-full h-full bg-white">Loading</div>
+      )}
+    </div>
+  );
+};
 
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
