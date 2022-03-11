@@ -33,9 +33,9 @@ const DeluxeRoom = () => {
             roomData={{
               caption: "A quality room with sea or mountain view",
               description:
-                "Luxury Suite Room Suite has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
-            rate: "₹2500/Night",
-              title: "LUXURY DOUBLE ROOM DELUXE",
+                "Deluxe Room - Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
+              rate: "₹2500/Night",
+              title: "LUXURY DELUXE ROOM",
             }}
             src={roomImg}
             learnMore={false}
@@ -47,12 +47,12 @@ const DeluxeRoom = () => {
             "The rooms come with full amenities; Flat Screen TV, Wi-Fi, air-conditioning, and complimentary breakfast.",
           ]}
           details={{
-            "Bed": "Single Twin Size",
-            "Occupancy": "2 Persons",
+            Bed: "Single Twin Size",
+            Occupancy: "2 Persons",
             "Room Service Timing": "7AM - 11PM",
             "Spa Timing": "9AM - 7PM",
             "Club/Pool Timing": "9AM - 7PM",
-            "Bathroom": "Yes",
+            Bathroom: "Yes",
             "Cable TV": "Yes",
             "Air Conditioner": "Yes",
           }}
@@ -63,12 +63,10 @@ const DeluxeRoom = () => {
             icons.tv,
             icons.wifi,
           ]}
-          price={
-            {
-              double: "2500",
-              single: "1800"
-            }
-          }
+          price={{
+            double: "2500",
+            single: "1800",
+          }}
         />
       </RoomLayout>
     </Layout>

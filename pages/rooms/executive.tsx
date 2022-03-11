@@ -37,7 +37,7 @@ const ExecutiveRoom = () => {
               description:
                 "Executive Room - Executive Room has a comfortable king size bed, a sitting, separate desk and bathroom.",
               rate: "₹2800/Night",
-              title: "LUXURY DOUBLE ROOM EXECUTIVE",
+              title: "LUXURY EXECUTIVE ROOM",
             }}
             src={roomImg}
             learnMore={false}

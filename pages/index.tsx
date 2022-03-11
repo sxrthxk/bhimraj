@@ -138,7 +138,7 @@ const Home = () => {
               roomData={{
                 caption: "A quality room with sea or mountain view",
                 description:
-                  "Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
+                  "Luxury Suite Room - Luxury Suite Room has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
                 rate: "₹3800/Night",
                 title: "LUXURY SUITE ROOM",
               }}

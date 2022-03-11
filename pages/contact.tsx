@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../lib/components/Hero";
 import Layout from "../lib/components/Layout";
-import hero from "../lib/assets/contact/br pool.jpg";
+import hero from "../lib/assets/contact/WhatsApp Image 2022-01-11 at 4.54.22 PM.jpeg";
 import FancyText from "../lib/components/FancyText";
 import Image from "next/image";
 
