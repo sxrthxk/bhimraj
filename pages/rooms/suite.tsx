@@ -12,8 +12,8 @@ import img6 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-27.
 import img4 from "../../lib/assets/rooms/suite/images/photo_2022-01-30_18-42-26 (2).jpg";
 import Head from "next/head";
 import Animate from "../../lib/components/Animate";
-import RoomDetails from "../../lib/components/RoomDetails";
-import { icons } from "../../lib/components/icons";
+import RoomDetails, { Span } from "../../lib/components/RoomDetails";
+import { icons, serviceIcons } from "../../lib/components/icons";
 
 const SuitePage = () => {
   return (
@@ -45,13 +45,14 @@ const SuitePage = () => {
             "Luxury Suite Room - Luxury Suite Room has a comfortable king size bed, a separate sitting room, separate desk and bathroom with walk-in rain dance shower.",
             "The rooms come with full amenities: Flat Screen TV, Wi-Fi, air-conditioning, minibar, complimentary breakfast and in room coffee & tea facilities.",
           ]}
+          services={Object.keys(serviceIcons).map((service, index) => (
+            <Span key={index} icon={serviceIcons[service].png} alt={serviceIcons[service].name}>
+              {serviceIcons[service].description}
+            </Span>
+          ))}
           details={{
             Bed: "King Size",
             Occupancy: "2 Persons",
-            "Restaurant Timing": "7AM - 11PM",
-            "Room Service Timing": "7AM - 11PM",
-            "Spa Timing": "9AM - 7PM",
-            "Club/Pool Timing": "9AM - 7PM",
             Bathroom: "Yes",
             "Cable TV": "Yes",
             "Air Conditioner": "Yes",

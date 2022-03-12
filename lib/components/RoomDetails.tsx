@@ -10,6 +10,7 @@ const RoomDetails = ({
   details,
   serviceIconsData,
   price,
+  services,
 }: {
   longtext: string[];
   details: { [value: string]: string };
@@ -18,16 +19,17 @@ const RoomDetails = ({
     single: string;
     double: string;
   };
+  services: JSX.Element[] | string[];
 }) => {
   const elements = [
     {
       title: "Description",
       el: <Description details={longtext} />,
     },
-    // {
-    //   title: "Room Services",
-    //   el: <RoomServices />,
-    // },
+    {
+      title: "Room Services",
+      el: <RoomServices services={services} />,
+    },
     {
       title: "Prices",
       el: <Prices price={price} serviceIconsData={serviceIconsData} />,
@@ -79,7 +81,7 @@ const RoomDetails = ({
 
 export default RoomDetails;
 
-const RoomServices = () => {
+const RoomServices = ({ services }: { services: JSX.Element[] | string[] }) => {
   return (
     <motion.div
       initial={{ opacity: 0, height: 0 }}
@@ -89,8 +91,9 @@ const RoomServices = () => {
         bounce: 0,
         ease: "easeInOut",
       }}
+      className="w-full"
     >
-      Other Services
+      {services.map(s => <>{s}</>)}
     </motion.div>
   );
 };
@@ -184,5 +187,24 @@ const PriceCard = ({
         <BookNow />
       </div>
     </div>
+  );
+};
+
+export const Span = ({
+  children,
+  icon,
+  alt
+}: {
+  children: string;
+  icon: StaticImageData;
+  alt: string;
+}) => {
+  return (
+    <span className="flex w-full justify-start space-x-6 items-center my-2.5">
+      <div className="relative w-6 h-6">
+        <Image src={icon} alt={`Illustration (${alt})`} />
+      </div>
+      <span className="text-lg font-light">{children}</span>
+    </span>
   );
 };

@@ -13,8 +13,9 @@ import img6 from "../../lib/assets/rooms/deluxe/images/photo_2022-01-30_18-44-15
 import img7 from "../../lib/assets/rooms/deluxe/images/photo_2022-01-30_18-44-16.jpg";
 import Head from "next/head";
 import Animate from "../../lib/components/Animate";
-import RoomDetails from "../../lib/components/RoomDetails";
-import { icons } from "../../lib/components/icons";
+import RoomDetails, { Span } from "../../lib/components/RoomDetails";
+import { icons, serviceIcons } from "../../lib/components/icons";
+import Image from "next/image";
 
 const DeluxeRoom = () => {
   return (
@@ -46,12 +47,18 @@ const DeluxeRoom = () => {
             "Deluxe Room - Deluxe Room has a comfortable single twin bed, a sitting, separate desk and bathroom.",
             "The rooms come with full amenities; Flat Screen TV, Wi-Fi, air-conditioning, and complimentary breakfast.",
           ]}
+          services={Object.keys(serviceIcons).map((service, index) => (
+            <Span
+              key={index}
+              icon={serviceIcons[service].png}
+              alt={serviceIcons[service].name}
+            >
+              {serviceIcons[service].description}
+            </Span>
+          ))}
           details={{
             Bed: "Single Twin Size",
             Occupancy: "2 Persons",
-            "Room Service Timing": "7AM - 11PM",
-            "Spa Timing": "9AM - 7PM",
-            "Club/Pool Timing": "9AM - 7PM",
             Bathroom: "Yes",
             "Cable TV": "Yes",
             "Air Conditioner": "Yes",
