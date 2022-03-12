@@ -14,7 +14,6 @@ const Galery = ({
 }: {
   data: { id: number; caption: string; url: string }[];
 }) => {
-  
   return (
     <Layout>
       <Head>
@@ -55,7 +54,9 @@ const LoadImage = ({ url }: { url: string }) => {
         alt="Gallery Image"
       />
       {!loaded && (
-        <div className="absolute top-0 left-0 w-full h-full bg-white">Loading</div>
+        <div className="absolute top-0 left-0 w-full h-full bg-white">
+          Loading
+        </div>
       )}
     </div>
   );
@@ -67,7 +68,7 @@ export const getStaticProps: GetStaticProps = async (
   const data: EntryCollection<{
     description: string;
     image: { fields: { file: { url: string } } };
-  }> = await client.getEntries("gallery");
+  }> = await client.getEntries({ content_type: "gallery" });
 
   return {
     props: {
