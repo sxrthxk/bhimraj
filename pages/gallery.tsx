@@ -54,7 +54,7 @@ const LoadImage = ({ url }: { url: string }) => {
         src={url}
         objectFit="cover"
         layout="fill"
-        // onLoad={() => setLoaded(true)}
+        onLoad={() => setLoaded(true)}
         alt="Gallery Image"
       />
       {!loaded && (
