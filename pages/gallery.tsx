@@ -18,7 +18,10 @@ const Galery = ({
     <Layout>
       <Head>
         <title>Bhimraj Resort | Gallery</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
       </Head>
       <Hero src={hero} text="gallery" darken />
       <section className="w-full py-24">
@@ -29,7 +32,7 @@ const Galery = ({
           {data.map(({ id, url, caption }) => (
             <div key={id} className="flex flex-col items-center">
               <LoadImage url={url} />
-              <span className="w-full font-sans uppercase text-lg mt-2">
+              <span className="w-full font-sans uppercase text-lg mt-2 text-center">
                 {caption}
               </span>
             </div>
@@ -55,8 +58,23 @@ const LoadImage = ({ url }: { url: string }) => {
         alt="Gallery Image"
       />
       {!loaded && (
-        <div className="absolute top-0 left-0 w-full h-full bg-white">
-          Loading
+        <div className="absolute top-0 left-0 w-full h-full bg-white flex items-center justify-center">
+          <svg viewBox="0 0 100 100" className="w-24 h-24">
+            <path
+              fill="#555"
+              d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+            >
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                dur="1s"
+                from="0 50 50"
+                to="360 50 50"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
         </div>
       )}
     </div>
