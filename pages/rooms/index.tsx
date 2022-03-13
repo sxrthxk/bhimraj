@@ -17,7 +17,8 @@ const RoomPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Bhimraj Resort | Executive Room</title>
+        <title>Bhimraj Resort | Rooms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <RoomLayout name="rooms" bg={roomImg} imgarr={[]}>
         <section className="max-w-6xl px-6 flex flex-col lg:flex-row m-auto gap-12 justify-left my-12">

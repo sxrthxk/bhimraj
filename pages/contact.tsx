@@ -15,6 +15,7 @@ const contact = () => {
     <Layout>
       <Head>
         <title>Bhimraj Resort | Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <Hero src={hero} text="contact us" darken />
       <section className="w-full py-24">

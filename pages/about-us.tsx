@@ -13,6 +13,7 @@ const AboutUsPage = () => {
     <Layout>
       <Head>
         <title>Bhimraj Resort | About</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <Hero src={hero} text="Story of Our Hotel" darken />
       <section className="w-full py-24">

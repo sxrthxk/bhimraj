@@ -25,6 +25,7 @@ const EventsPage = ({
     <Layout>
       <Head>
         <title>Bhimraj Resort | Events</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <section className="my-24 mx-auto max-w-6xl">
         <FancyText bgText="Celebration" className="my-12">

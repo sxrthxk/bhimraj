@@ -20,6 +20,7 @@ const SuitePage = () => {
     <Layout>
       <Head>
         <title>Bhimraj Resort | Suite Room</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <RoomLayout
         name="Suite"

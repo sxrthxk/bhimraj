@@ -23,6 +23,7 @@ const Home = () => {
     <Layout>
       <Head>
         <title>Bhimraj Resort | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
       <HeroCarousel />
       {
