@@ -18,7 +18,7 @@ import RoomDetails, { Span } from "../../lib/components/RoomDetails";
 import { icons, serviceIcons } from "../../lib/components/icons";
 import Image from "next/image";
 
-const DeluxeRoom = () => {
+const Grandexecutive = () => {
   return (
     <Layout>
       <Head>
