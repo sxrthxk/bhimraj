@@ -58,6 +58,12 @@ const Navbar = () => {
             <span className="hover:text-khaki transition-all">
               <Link href={"/rooms/deluxe"}>deluxe</Link>
             </span>
+            <span className="hover:text-khaki transition-all">
+              <Link href={"/rooms/Grand-executive"}>Grand-executive</Link>
+            </span>
+            <span className="hover:text-khaki transition-all">
+              <Link href={"/rooms/Maharaja-suit"}>Maharaja suit</Link>
+            </span>
           </div>
         </DropDownLink>
 
